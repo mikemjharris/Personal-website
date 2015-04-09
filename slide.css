@@ -1,0 +1,101 @@
+#nav{
+	background: grey;
+	display:inline-block;	
+	margin:0px;
+	padding:0px;
+	width:150px;	
+	float:left;
+	border:1px solid black;
+	 -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+     -moz-box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+          box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+	margin-bottom:20px;
+}
+
+.hdr{
+	width:152px;
+}
+
+ul{
+	list-style: none;
+	width:150px;
+	padding:0px;
+	
+ 
+}
+
+a{
+	text-decoration:none;
+	display:inline-block;
+	width:140px;
+	padding:5px;
+	background:grey;
+	color: white;
+	background: -webkit-gradient(linear, left top, left bottom, from(#A0A0A0), to(#404040));
+	text-shadow: 0px 1px 0px #black;
+}
+
+
+#nav li, #nav li ul li{
+	padding:0px;
+	position:relative;
+ 
+}
+
+#nav li ul , #nav li ul li ul{
+	visibility:hidden;
+	position:absolute;
+	padding:0px;
+	opacity:0;
+	-webkit-transition:opacity 0.5s linear, visibility 0.5s linear; 
+    -moz-transition:opacity 0.2s linear, visibility 0.2s linear; 
+    -o-transition:opacity 0.2s linear, visibility 0.2s linear; 
+    transition:opacity 0.2s linear, visibility 0.2s linear;
+	
+}
+#nav li:hover>ul{
+	visibility:visible;
+	opacity:1;
+}
+
+
+#nav li:hover>a {
+		color:black;
+		background: -webkit-gradient(linear, left top, left bottom, from(#808080), to(#e0e0e0));
+		
+}
+
+#nav li ul, #nav li ul li ul{
+	left:140px;
+	top: 3px;
+	z-index:900;
+	}
+#nav li ul{
+	border: 1px solid black;
+}
+
+
+	
+
+	
+#nav>li{
+	margin:0px;
+	padding:0px;
+	width:150px;
+}
+
+
+
+.clear{
+	
+	clear:both;
+}
+ .box {
+ 	border:1px solid black;
+	margin-left:5px;
+	margin-bottom: 5px;
+	display:inline-block;
+	width: 600px;
+ }
+ 
+ 

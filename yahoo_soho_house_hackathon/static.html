@@ -1,0 +1,56 @@
+<html ng-app="yahooWeatherApp">
+<head>
+  <title>Weather App</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>    
+  <script type="text/javascript" src="app.js"></script>
+  <script src="http://yui.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+  <link rel="stylesheet" href="style.css" /> 
+  <meta charset="UTF-8">
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36647147-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+  <h1>GET OUT OF LONDON!</h1>
+  <div ng-controller="WeatherController">
+    
+    <p id='score'>Score = {{score}}</p>
+    <p class='info'>London temp: {{ londontemp }} °F </p>
+    <!-- <img src="https://farm{{ londonpic.farm }}.staticflickr.com/{{ londonpic.server }}/{{ londonpic.id }}_{{londonpic.secret }}.jpg" /> -->
+    
+    <p class='info'>{{ randomcapital }} </p>
+    <p class='info'>Warmer or Colder?</p>
+    <button class='next' ng-show='answer' ng-click="next()" ng-click="updateScore()">Next</button>
+    <button class='higher' ng-click="higher()" ng-hide='answer'>Warmer</button>
+    <button class='lower' ng-click="lower()" ng-hide='answer'>Colder</button>
+
+    <div id='answer' ng-show='answer'> 
+      <h2> {{ answer }} The temperature in {{ randomcapital }} ({{ randomcountry }}) is {{ randomcapitaltemp }} °F</h1>
+
+
+     <img src="https://farm{{ pic.farm }}.staticflickr.com/{{ pic.server }}/{{ pic.id }}_{{pic.secret }}.jpg" />
+     <img style="width:200px" src="http://flagpedia.net/data/flags/normal/{{ randomcountrycode }}.png" />
+    </div>
+
+
+<!--     <div class="cont">
+      <div ng-repeat="pic in flickerPics">
+        <img src="https://farm{{ pic.farm }}.staticflickr.com/{{ pic.server }}/{{ pic.id }}_{{pic.secret }}.jpg" />
+      </div>
+    </div> -->
+    {{data}}
+
+
+  </div>
+</body>
+</html>

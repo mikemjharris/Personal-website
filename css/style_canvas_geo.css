@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: verdana;
+  font-family: inconsolata;
+}
+
+canvas {
+  border: 1px solid black;
+  width: 100%;
+  height: 100vh;
+}
+
+.selected {
+  border: 1px solid white;
+}
+
+#color-picker {
+  display: flex;
+  flex-flow: row wrap;
+  width: 200px;
+}
+#color-picker div {
+  width: 10px;
+  height: 10px;
+}
+.controls , .controls-background{
+  margin: 10px;
+  position: absolute;
+  width: 250px;
+  height: calc(100vh - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+  overflow: scroll;
+}
+
+#size{
+  width: calc(100% - 4em);
+}
+.controls-background {
+  background: hsla(0, 100%, 100%, 0.5);
+  border: 1px solid  hsla(0, 100%, 100%, 0.7);
+}
+
+#downloadOptions {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0 ;
+}
+.downloadOptions{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.downloadOptions input, .downloadOptions label {
+  padding: 5px;
+  margin: 5px 0;
+  vertical-align: center;
+}
+
+#download {
+  width: 100%;
+  text-align: right;
+
+}
+label {
+  font-size: 16px;
+  width: 30%;
+}

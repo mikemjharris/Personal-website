@@ -1,0 +1,100 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.bigbox {
+	width:600px;
+	margin-left:auto;
+   margin-right:auto;
+  	
+}
+
+#box1, #box2 {
+	margin-top: 3em;
+  width: 159px;
+  height: 300px;
+  display: inline -block;
+  float: right;
+ 
+}
+#box1 {
+	float:left;
+}
+
+h1 {
+	font-size: 1em;
+	border: 1px solid black;
+	text-align: center;
+}
+
+ul{
+    position: relative;
+    list-style: none;
+  
+}
+
+a{
+	border: 1px solid black;
+	display: inline-block;
+   width: 45px;
+   text-decoration: none;
+   text-align: center;
+	background:grey;
+	color: white;
+	background: -webkit-gradient(linear, left top, left bottom, from(#A0A0A0), to(#404040));
+	text-shadow: 0px 1px 0px #black;
+}
+
+li {
+    float: left;
+	 display: block;
+    width: 50px;
+    text-align: center;
+}
+img {
+    width: 158px;
+    height: auto;
+    border: 1px solid black;
+    position:absolute;
+    top: 2em;
+    left: 0px;
+    opacity: 0;
+    -webkit-transition: opacity 2s linear;
+}
+
+.invanc {
+    display:none;
+}
+
+
+
+:target ~ img {
+     display: inline-block;
+    opacity: 1;
+}
+
+
+:target ~ a {
+	z-index: 500;
+	height:2em;
+	border-bottom: none;
+	color:black;
+	background: -webkit-gradient(linear, left top, left bottom, from(#808080), to(#e0e0e0));
+	display: inline-block;
+}
+
+#show2  li{
+    width: 150px;
+}
+
+
+#show2 li a {
+	position: absolute;
+	top: 0px;
+	right: 1em;
+}
+
+ li  a:nth-child(2) {
+	left: 1em;
+}

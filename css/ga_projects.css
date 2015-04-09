@@ -1,0 +1,151 @@
+@media screen and (max-width: 460px) {	
+		.container {
+			width: 100% !important;
+			height: auto !important;
+			overflow: visible !important;
+			border: none !important;
+		}
+
+		h2 {
+			margin-bottom:30px !important;
+		}
+
+		.home {
+			position: absolute !important;
+			top: 0px !important;
+			left: 0px !important;
+			z-index: 100;
+		} 
+
+		body {
+			overflow: visible !important;
+}
+		#conttopgap{
+			height: 0px !important;
+		}
+		
+}
+		*{
+			padding: 0px;
+			margin: 0px;
+			box-sizing: border-box;
+			-moz-box-sizing:border-box;
+			font-family: 'Inconsolata', sans-serif;
+		}
+
+		html {
+			height: 100%;
+		}
+
+		#conttopgap{
+			height:5%;
+		}
+		body {
+			
+				height: 100%;
+			}
+
+		.container {
+			width: 90%;
+			
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 600px;
+		
+			position: relative;
+			background: white;
+			border: 1px solid black;
+			padding: 20px;
+			
+		}
+
+		a  { 
+			color: inherit;
+		}
+		
+		h2 {
+			text-align: center;
+			display: block;
+			height: 30px;
+			margin-bottom: 15px;
+		}
+		.logo {
+			display: block;
+			width: 30%;
+			height: 30%;
+			position: absolute;
+			bottom: 35%;
+			left:  35%;
+			opacity: 0.2;
+			z-index: -5;
+
+		}
+
+		.home {
+			position: fixed;
+			top: 10px;
+			left: 10px;
+		} 
+
+		.home img {
+			width: 25px;
+			height: 25px;
+		}
+
+		.home a {
+			color:white;
+		}
+
+
+		.home a:hover {
+			color:black;
+		}
+
+		 p {
+			text-align: justify;
+			margin-bottom: 10px;
+		}
+
+		h3 {
+			margin: 20px 0;
+			font-size: 25px;
+			font-weight: bold;
+			clear: both;
+		}
+
+		.project_img {
+			width: 100px;
+			vertical-align:text-top;
+			float: left;
+			margin-top: 10px;
+			margin-right: 10px;
+		}
+		
+		.project_img_main{
+			width: 100px;
+			vertical-align:text-top;
+			float: left;
+			margin-top: 0px;
+			margin-right: 10px;
+
+			}
+		 section a {
+			text-decoration: none;
+		
+		}
+		section {
+				border: 1px solid white;
+				text-align: justify;
+				padding: 5px 5px;
+		}
+		section:hover {
+			border: 1px solid #ff7373;
+		}
+		.clear {
+			clear: both;
+		}
+
+		.small_title {
+			font-weight: bold;
+			text-decoration: underline;
+		}

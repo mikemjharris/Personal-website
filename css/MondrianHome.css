@@ -1,0 +1,149 @@
+* {
+	font-family: 'Fauna One';
+	transition:  opacity 1s, transform 1s color 1s;
+	-webkit-transition: opacity 1s, -webkit-transform 1s; /* Safari */
+	-moz-transition: opacity 1s, -moz-transform 1s; /* Safari */
+}
+
+#main {
+}
+.row {
+	height: 200px;
+}
+.col{
+	border: 5px solid black;
+	height: 100%;
+	width: 18%;
+	float: left;
+}
+
+#contact{
+	border-top: 10px solid black;
+	height: 70px;
+	margin-top: 120px; 
+	background: yellow;
+	position: relative;
+	text-align: center;
+	font-weight: bold;
+	color: red;
+	font-weight: bold;
+
+}
+
+#contact:hover {
+}
+#contactdetails {
+	position: absolute;
+	top: 70px;
+	opacity: 0;
+	width: 100%;
+	height: 200px;
+	border-top: 10px solid black;
+}
+
+#contactdetails > a {
+	color: black;
+}
+
+#contact:hover > #contactdetails {
+	opacity: 1.0;
+	background: yellow;
+}
+.col1 {
+	width:5%;
+}
+
+.col2 {
+	width: 30%;
+}
+	
+.col3 {
+	width: 5%;
+}
+
+.col4 {
+	width: 25%;
+}
+
+#row1 {
+	height: 90px;
+}
+
+.cleardiv { 
+	clear: both;
+}
+
+ a{ 
+	 text-decoration: none;
+	 color: black;
+}
+
+#projects {
+	color: red;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	background: blue;
+	font-weight: bold;
+}
+#projectlist {
+	position: absolute;
+	top: 200px;
+	opacity: 0;
+	width: 100%;
+	height: 200px;
+	border-top: 10px solid black;
+	background: blue;
+}
+
+#projectlist > a {
+	color: black; 
+}
+#projects:hover #projectlist {
+	opacity: 1;
+}
+
+
+#about {
+	color: black;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	background: red;
+	font-weight: bold;
+	backface-visibility:hidden;
+	-webkit-backface-visibility:hidden; /* Chrome and Safari */
+	/*-moz-backface-visibility:hidden; /* Firefox */
+	/*-ms-backface-visibility:hidden; */
+	
+}
+
+#aboutdetails {
+	position: absolute;
+	top: 0px;
+	opacity: 0;
+	width: 100%;
+	height: 200px;
+	border-top: 0px solid black;
+	color: black;
+	background: red;
+	transform:rotateX(180deg);
+	-webkit-transform:rotateX(180deg); /* Safari and Chrome */
+	
+}
+
+#about:hover {
+	transform:rotateX(180deg);
+	-webkit-transform:rotateX(180deg); /* Safari and Chrome */
+	color: red;	
+}
+
+#about:hover > #aboutdetails{
+opacity: 1;
+}
+
+.vis {
+	opacity: 1
+}

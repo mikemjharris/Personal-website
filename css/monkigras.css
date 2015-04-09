@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+svg {
+  width: 50px;
+  height: 50px;
+  transition: margin 1s;
+}
+
+.norway ~ svg:first-of-type {
+  margin-left: 60px;
+}
+
+section {
+  margin: 50px auto 15px auto;
+  outline: 1px solid black;
+  width: 250px;
+  height: 150px;
+  font-size: 0;
+  transition: all 1.5s;
+}
+section div {
+  transition: all 1s;
+}
+section div div {
+  transition: all 1s;
+  opacity: 0;
+}
+
+.denmark {
+  background: white;
+}
+
+.sweeden {
+  background: yellow;
+}
+
+.finland {
+  background: blue;
+}
+
+.norway {
+  background: blue;
+}
+
+.monkigras, .blank {
+  background: white;
+  outline: 1px solid white;
+}
+
+.iceland {
+  background: red;
+}
+
+div {
+  display: inline-block;
+  background: white;
+  outline: 1px solid white;
+}
+.sweeden div {
+  background: blue;
+  outline: 1px solid black;
+}
+.finland div {
+  background: white;
+  outline: 1px solid black;
+}
+.norway div {
+  background: white;
+  outline: 1px solid black;
+}
+.norway div div {
+  opacity: 1;
+}
+.iceland div {
+  background: white;
+  outline: 1px solid black;
+}
+.iceland div div {
+  opacity: 1;
+}
+.denmark div {
+  background: red;
+  outline: 1px solid black;
+}
+
+section div:nth-child(1) {
+  width: 60px;
+  height: 60px;
+}
+section div:nth-child(1) div {
+  float: left;
+  width: 0px;
+  height: 0px;
+}
+
+section.norway div:nth-child(1) {
+  width: 60px;
+  height: 60px;
+}
+section.norway div:nth-child(1) div {
+  width: 50px;
+  height: 50px;
+  background: red;
+}
+
+section.iceland div:nth-child(1) {
+  width: 60px;
+  height: 60px;
+}
+section.iceland div:nth-child(1) div {
+  width: 50px;
+  height: 50px;
+  background: blue;
+}
+
+section div:nth-child(2) {
+  width: 160px;
+  height: 60px;
+  margin-left: 30px;
+}
+section div:nth-child(2) div {
+  float: right;
+  width: 0px;
+  height: 0px;
+}
+
+section.norway div:nth-child(2) {
+  width: 160px;
+  height: 60px;
+}
+section.norway div:nth-child(2) div {
+  float: right;
+  width: 150px;
+  height: 50px;
+  background: red;
+}
+
+section.iceland div:nth-child(2) {
+  width: 160px;
+  height: 60px;
+}
+section.iceland div:nth-child(2) div {
+  float: right;
+  width: 150px;
+  height: 50px;
+  background: blue;
+}
+
+section div:nth-child(3) {
+  width: 60px;
+  height: 60px;
+  margin-top: 30px;
+}
+section div:nth-child(3) div {
+  float: left;
+  height: 0px;
+  width: 0px;
+  margin-top: 60px;
+}
+
+section.norway div:nth-child(3) {
+  width: 60px;
+  height: 60px;
+}
+section.norway div:nth-child(3) div {
+  float: left;
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  background: red;
+}
+
+section.iceland div:nth-child(3) {
+  width: 60px;
+  height: 60px;
+}
+section.iceland div:nth-child(3) div {
+  float: left;
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  background: blue;
+}
+
+section div:nth-child(4) {
+  width: 160px;
+  height: 60px;
+  margin-left: 30px;
+}
+section div:nth-child(4) div {
+  float: right;
+  height: 0px;
+  width: 0px;
+  margin-top: 60px;
+  margin-left: 160px;
+}
+
+section.norway div:nth-child(4) {
+  width: 160px;
+  height: 60px;
+}
+section.norway div:nth-child(4) div {
+  float: right;
+  margin-top: 10px;
+  width: 150px;
+  height: 50px;
+  background: red;
+}
+
+section.iceland div:nth-child(4) {
+  width: 160px;
+  height: 60px;
+}
+section.iceland div:nth-child(4) div {
+  float: right;
+  margin-top: 10px;
+  width: 150px;
+  height: 50px;
+  background: blue;
+}

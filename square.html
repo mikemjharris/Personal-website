@@ -1,0 +1,87 @@
+<!DOCTYPE>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/square.css" type="text/css" />
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/square.js"></script>
+</head>
+
+<body>
+
+
+
+	<table>
+	<tr>
+		<td>Height:</td>
+		<td class="tableright"><select name="height">
+				<option value="100px">100px</option>
+				<option value="200px">200px</option>
+				<option value="300px">300px</option>
+				<option value="400px">400px</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Width:</td>
+		<td class="tableright"><select name="width">
+				<option value="100px">100px</option>
+				<option value="200px">200px</option>
+				<option value="300px">300px</option>
+				<option value="400px">400px</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Offset Top:</td>
+		<td class="tableright"><select name="margin-top">
+				<option value="100px">100px</option>
+				<option value="200px">200px</option>
+				<option value="300px">300px</option>
+				<option value="400px">400px</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Offset Right:</td>
+		<td class="tableright"><select name="margin-left">
+				<option value="100px">100px</option>
+				<option value="200px">200px</option>
+				<option value="30px">300px</option>
+				<option value="400px">400px</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Rotate</td>
+		<td class="tableright"><select name="-webkit-transform">
+				<option value="rotate(30deg)">30deg</option>
+				<option value="rotate(300deg)">300deg</option>
+				<option value="rotate(740deg)" selected="selected">740deg</option>
+				<option value="rotate(940deg)">940deg</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+	<td colspan="2"> <div id="submit">Submit</div> </td>
+	</tr>
+	<tr>
+	<td colspan="2"> <div id="reset">Reset</div> </td>
+	</tr>
+	<tr>
+	<td colspan="2">
+			<div id="desc">
+				<p id="tit">Description</p>
+				<p>Alters the CSS style for the small grey square and performs trasformation. Set the attributes then hit subit. Hit reset to start again </p>
+			</div> </td>
+	</tr>
+	</table>
+
+	<div id="display">
+		<div class="obj" id="TranWid"></div>
+	</div>
+
+
+
+
+</body>

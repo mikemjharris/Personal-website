@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>Geometric Generator</title>
+  <link rel="stylesheet" type="text/css" href="css/style_canvas_geo.css">
+  <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+  <link rel="icon"
+      type="image/png"
+      href="img/geo_fav.png">
+</head>
+<body>
+
+  <div class="controls-background">
+  </div>
+
+  <div class="controls">
+    <div>
+      <h1>Geometric Generator</h1>
+      <h3>Square size</h3>
+      <input id="size" type="range" min="20" max="100" step="5" value="40" />
+      <span id="size-value">40</span>
+
+      <h3>Base Color</h3>
+      <div id='color-picker'></div>
+      <h3>Dowload Image<h3>
+      <select id="downloadOptions">
+      </select>
+      <div class="downloadOptions">
+        <label>Width:</label><input type="number" id="download-width" class="download" />
+        <label>Height:</label><input type="number" id="download-height" class="download" />
+        <a href="" id="download">Download</a>
+      </div>
+
+    </div>
+    <div class="last">Built by <a href="http://twitter.com/mikemjharris" target="_blank">@mikemjharris</a></div>
+  </div>
+
+  <canvas id="c" ></canvas>
+
+</body>
+<script type="text/javascript" src="js/main_canvas_geo.js"></script>
+
+</html>

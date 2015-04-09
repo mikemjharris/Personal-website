@@ -1,0 +1,59 @@
+<html ng-app="Yahoohack">
+<head>
+  <title>Soho Hack</title>
+  <link rel="stylesheet" href="mondrian.css"/>
+  <script src="jquery.js"></script>
+  
+  <script src="mondrian.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36647147-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body ng-controller="MondrianController">
+  
+<div class="menu">
+  <!-- <div id="change">Update data</div>  -->
+  <div id="run">Live data</div>
+</div>
+
+<div class="control">
+  <h2>Meta Mondrian</h2>
+  <div class="fashion blue">Media 25%</div>
+  <div class="media yellow">Fashion 30%</div>
+  <div class="art red"> Art : 45%</div>
+</div>
+
+<div class="holder">
+<div class="container">
+  <div class="row" id="top">
+    <div class="square md"></div>
+    <div class="square sm"></div>
+    <div class="square lg red"></div>
+  </div>
+  <div class="row" id="middle">
+    <div class="square md"></div>
+    <div class="square sm"></div>
+    <div class="square lg"></div>
+  </div>
+  <div class="row" id="bottom">
+    <div class="square md yellow"></div>
+    <div class="square sm"></div>
+    <div class="square half lg blue "></div>
+    <div class="square half_sm lg"></div>
+  </div>
+</container>
+
+</body>
+
+</html>

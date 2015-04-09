@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+
+	 <link rel="stylesheet" href="css/canvasClock.css" type="text/css"  />
+	 <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+   <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36647147-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    <!--<style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+	  canvas {
+		border: 1px solid black;
+		background: red;
+		width: 200px;
+		margin: 10px ;
+
+		}
+
+    </style>-->
+  </head>
+  <body>
+    <nav class="home">
+    <a href="/index.html"><img src="sirrahcol.png" /><br />Home</a>
+  </nav>
+	<div style="text-align:center; font-family:inconsolata">This is a clock made out of circles using the HTML canvas object and a bit of Javascript</div>
+  <div>
+
+    <canvas id="myCanvas3" width="400px" height="400px" ></canvas>
+
+</div>
+  	<script>
+
+
+	// shim layer with setTimeout fallback
+    window.requestAnimFrame = (function(){
+      return  window.requestAnimationFrame       ||
+              window.webkitRequestAnimationFrame ||
+              window.mozRequestAnimationFrame    ||
+              window.oRequestAnimationFrame      ||
+              window.msRequestAnimationFrame     ||
+              function( callback ){
+                window.setTimeout(callback, 1000 / 60);
+              };
+    })();
+
+
+    // usage:
+    // instead of setInterval(render, 16) ....
+
+    (function animloop(){
+      requestAnimFrame(animloop);
+      render();
+    })();
+    // place the rAF *before* the render() to assure as close to
+    // 60fps with the setTimeout fallback.
+
+	function dispT (d, ord) {
+		if (ord == 2) {
+			var fir = "00";
+			var sec = "0";
+		} else {
+			var fir = "0";
+			var sec = "";
+			};
+
+		if (d < 10) {
+			return fir + d;
+		}  else if (d < 100) {
+			return sec + d;
+			} else {
+				return d;
+			};
+		};
+
+	  function render() {
+
+	  var d = new Date();
+	  var canvas = document.getElementById('myCanvas3');
+      var context = canvas.getContext('2d');
+      var x = 0;
+      var y = 0;
+      var radius = Math.min(canvas.width , canvas.height) /4 + 10;
+      var startAngle = 0
+      var endAngle = -0.1 * Math.PI;
+      var counterClockwise = false;
+	  var hourang = ((d.getHours()* 60 + d.getMinutes()) / 360  + 1.55)  * Math.PI
+	  var minang = ((d.getMinutes() * 60 + d.getSeconds()) / 1800 + 1.55 )  * Math.PI
+	  var secang = ((d.getSeconds()* 1000 + d.getMilliseconds()) / 30000 + 1.55)  * Math.PI
+
+
+
+	  context.clearRect(0, 0, canvas.width, canvas.height)
+	  context.save();
+	  context.font = '20pt Calibri';
+	  context.textAlign = 'center';
+      context.fillText('12', canvas.width/2, canvas.width/2 - radius - 15);
+	  context.fillText('6', canvas.width/2, canvas.width/2 + radius + 15 + 20);
+	  context.fillText('9', canvas.width/2 - radius - 20, canvas.width/2);
+	  context.fillText('3', canvas.width/2 + radius + 20, canvas.width/2);
+	  context.fillText(dispT(d.getHours(),1) + ":" + dispT(d.getMinutes(),1) + ":" + dispT(d.getSeconds(),1) + ":" + dispT(d.getMilliseconds(),2), canvas.width/2, canvas.width/2 + radius + 70);
+
+      context.beginPath();
+	  //set line features
+	  context.lineWidth = 15;
+	  context.lineCap = 'round';
+	  context.strokeStyle = 'black';
+
+	 // translate canvas so we move the focus to the center.
+	  context.translate(canvas.width / 2, canvas.height / 2);
+	  // save
+	  context.save();
+
+	  // roatate outer circle
+	  context.rotate(secang);
+
+      context.arc(x, y, radius, startAngle, endAngle, counterClockwise);
+	  context.stroke();
+
+	  context.restore();
+	  context.save();
+
+	  context.rotate(minang);
+	  context.moveTo( x + radius-25 , y );
+	  context.arc(x, y, radius-25, startAngle, 1.5 * endAngle, counterClockwise);
+	  context.stroke();
+
+	  context.restore();
+	  context.rotate(hourang);
+	  context.moveTo( x + radius-50 , y );
+	  context.arc(x, y, radius-50, startAngle, 2*endAngle, counterClockwise);
+	  context.stroke();
+	  context.restore();
+
+
+	 }
+
+
+
+    </script>
+
+  </body>
+</html>

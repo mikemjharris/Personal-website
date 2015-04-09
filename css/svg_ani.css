@@ -1,0 +1,11 @@
+.desc {
+	text-align: center;
+}
+
+svg {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 30vh auto;
+}
+

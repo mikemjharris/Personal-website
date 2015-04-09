@@ -1,0 +1,62 @@
+*{
+  box-sizing: border-box;
+  font-family: verdana;
+}
+
+body {
+  background: url('background.png') repeat fixed center; 
+}
+audio{
+  position: absolute;
+  top: -200px;
+}
+
+h1 {
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+}
+.girl {
+  margin-left: 140px;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  width: 50%;
+}
+
+
+.holder {
+  position: absolute;
+  bottom: 20vh;
+  width: 50%;
+  transition: all 2s ease-in-out;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.balloon {
+  width: 100%;
+}
+
+.cont {
+  position: relative;
+  height: 100vh;
+  width: 20%;
+  float: left;
+}
+
+
+.girl {
+  margin-left: 140px;
+  position: absolute;
+  bottom: 0px;
+
+
+@media (max-width: 1050px) { 
+.girl {
+  bottom: 30px;
+}
+
+
+ }

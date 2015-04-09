@@ -1,0 +1,98 @@
+*{
+   box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-family: verdana;
+ 
+}
+.brief {
+  font-weight: bold;
+  font-style: italic;
+  margin: 10px;
+}
+
+.brief span {
+  font-style: normal;
+  font-weight: normal;
+}
+audio{
+  position: absolute;
+  top: -200px;
+}
+
+.home {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.bau {
+  cursor: pointer;
+  padding-top: 10px;
+  width: 100%;
+  max-width: 700px;
+  
+  display:  inline-block;
+}
+.answer {
+  padding: 10px;
+  border-radius: 5px;
+  background: hsla(0,100%,50%,1);
+  margin: 5px;
+  width: 410px;
+  display: inline-block;
+}
+img {
+  width: 200px;
+
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  font-size: 16px;
+  font-weight: 200;
+
+}
+.home_links {
+margin: 10px;
+}
+.home_links a {
+  width: 200px;
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  padding: 10px;
+  font-size: 25px;
+  margin: 5px;
+  background: hsla(240, 50%, 50%, 1);
+  color: white;
+}
+
+.home_links a:hover {
+    background: hsla(240, 100%, 50%, 1)
+  }
+.button {
+  background: hsla(240,100%,50%,1);
+  width: 200px;
+  /*height: 50px;*/
+  line-height: 50px;
+  border-radius: 5px;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+
+
+}
+.cont {
+  border: 2px solid black;
+  margin: 20px;
+  display: inline-block;
+  vertical-align: top;
+  height: 500px;
+  overflow: scroll;
+}

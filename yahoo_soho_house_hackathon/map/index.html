@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title>3 Beards Yahoo</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization"></script>
+  <script src="app.js"></script>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36647147-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+   
+</head>
+<body>
+
+<div id="title">
+ <p> <h2> People come from all over the world to show <b>London</b> to the <i>rest</i> of the world, through flickr.</h2>
+  <img id="flickrlogo" src="flickr.jpg"/>
+  <h4>(Random pictures from London on fashion, music, art and sport and where people came from to take them.)</h4>
+
+</div>
+
+<div id="map_canvas"></div>
+
+
+<div ng-app="ThreebeardsYahoo">
+  <div ng-controller="FlickrController">
+ 
+    
+    <input type="hidden" id="location" value="{{flickrPhotoInfo}}" ></input>
+      <div id="container" class="clearfix">
+
+        <div ng-repeat = "photo in flickrPhotoUrls">
+
+          <img src="{{photo}}" />
+
+        </div>
+      </div>
+  </div>
+</div>
+</body>
+  <script src="locationmap.js"></script>
+</html>

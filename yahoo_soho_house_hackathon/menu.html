@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+      <script src="http://yui.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+      <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36647147-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+        <style>
+        *{
+          font-family: verdana;
+        }
+        .sliders {
+    display: inline-block;
+    zoom: 1; *display: inline;
+    width: 210px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.color {
+    display: inline-block;
+    zoom:1; *display: inline;
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    margin: 0 20px;
+    vertical-align: middle;
+}
+.output {
+    display: inline-block;
+    zoom: 1; *display: inline;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.sliders dt,
+.output dt {
+    float: left;
+    clear: left;
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+}
+.sliders dd,
+.output dd {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+}
+
+.cont {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 20px;
+}
+
+
+        </style>
+    </head>
+    <body>
+      <div class="cont">
+        <h2>How awesome is this hackathon?</h2>
+        <div class="sliders yui3-skin-sam">
+    
+         <span id="r-val" class="val"></span><div id="r-slider"></div>
+      </div>
+    
+</div>
+
+        <script>
+            YUI().use('slider', 'color', function(Y){
+                // sliders
+    var rSlider = new Y.Slider({ min: 0, max: 100, value: Math.round(Math.random()*50 + 50) })
+        
+        // slider values
+        rVal = Y.one('#r-val')
+        
+
+        // color strings
+        hex = Y.one('#hex'),
+
+        // color chip
+        color = Y.one('.color');
+
+    // render sliders
+    rSlider.render('#r-slider');
+
+    rSlider.after('thumbMove', function(e) {
+        rVal.set('text', rSlider.get('value'));
+        
+    });
+    
+    
+    function updateColors() {
+        var r = rSlider.get('value')
+    }
+
+    rVal.set('text', rSlider.get('value'));
+    
+    updateColors();
+
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+*{
+  box-sizing: border-box;
+  font-family: verdana;
+  text-align: center;
+}
+
+body {
+  padding; 0;
+  margin: 0;
+}
+
+.spot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  /*border: 1px solid black;*/
+  display: inline-block;
+  margin: 5px;
+  transition: all 1s;
+}
+.legend {
+  top: 50px;
+  width: 200px;
+  position: absolute;
+  font-size: 20px; 
+}
+.cont {
+  width: 600px;
+  margin: 20px auto;
+}
+
+.legend div {
+  padding: 3px;
+}
+
+.media {
+  background: hsla(51,90%,60%,0.8)
+}
+.fashion {
+  background: hsla(102,90%,60%,0.8)
+}
+.art {
+  background: hsla(153,90%,60%,0.8)
+}
+.film {
+  background: hsla(204,90%,60%,0.8)
+}
+
+.music {
+  background: hsla(255,90%,60%,0.8)
+}
+
+@media (max-width: 1050px) { 
+
+.legend {
+  position: initial;
+  /*float: right;*/
+}
+
+.cont {
+  width: 320px;
+}
+.spot {
+  width: 30px;
+  height: 30px;
+}
+
+
+ }

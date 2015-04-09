@@ -1,0 +1,309 @@
+* {
+  box-sizing: border-box; 
+}
+
+body {
+  text-align: center;
+}
+.show {
+  width: 20vh;
+  height: 20vh;
+  border: 1px solid black;
+  display: inline-block;
+  border-radius: 20vh;
+
+}
+
+.container {
+  width: 63vh;
+  height: 20.5vh;
+  /*border: 1px solid black;*/
+  /*overflow: hidden;*/
+  display: block;
+  margin: 0 auto;
+  transition: all 1s;
+}
+.show {
+ transition: all 0.7s; 
+}
+.show:nth-child(even){
+  background: #FF4040;
+}
+ .show:nth-child(odd){
+      background: #39E639;
+}
+
+.show:nth-child(2n + 3){
+      background: white;
+}
+
+@media screen and (max-width: 1400px) {
+  .show{
+      height: 100vh;
+      width: 100vh;
+  }
+  #container1 {
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .show:nth-child(2n +1){
+      background: #33CCCC;
+}
+.show:nth-child(3n + 2){
+      background: #39E639;
+}
+  .show {
+    width: 10vh;
+    height: 10vh;
+  }
+
+  #container3 {
+  width: 21vh;
+  height: 20.5vh;
+}
+ #container4 {
+  width: 21vh;
+  height: 63vh;
+}
+ #container1 {
+  width: 60vh;
+  
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 0vh;
+}
+#container2 {
+  width: 80vh;
+  height: 21vh;
+}
+}
+
+
+
+@media screen and (max-width: 1100px) {
+  .show:nth-child(odd){
+      background: white;
+}
+.show:nth-child(3n){
+      background: #FF9640;
+}
+  .show {
+    width: 14vh;
+    height: 14vh;
+  }
+.show {
+  border-radius: 500px;
+}
+  #container3 {
+  width: 21vh;
+  height: 20.5vh;
+}
+ #container4 {
+  width: 21vh;
+  height: 63vh;
+  margin-right: 0;
+}
+ #container1 {
+  width: 90vh;
+  height: 21vh;
+  margin-right: 0;
+  margin-left: auto;
+  margin-top: 20vh;
+}
+#container2 {
+
+  width: 80vh;
+  height: 21vh;
+}
+}
+
+
+@media screen and (max-width: 950px) {
+.show:nth-child(odd){
+      background: #33CCCC;
+}
+.show {
+  border-radius: 0;
+}
+  #container1 {
+  width: 83vh;
+  height: 20.5vh;
+
+}
+ #container2 {
+  width: 21vh;
+  height: 23vh;
+  margin-left: 0;
+}
+ #container3 {
+  width: 41vh;
+  height: 41vh;
+
+}
+}
+
+@media screen and (max-width: 750px) {
+  .show:nth-child(even){
+      background: #39E639;
+}
+
+.show {
+  border-radius: 500px;
+}
+  #container2 {
+  width: 21vh;
+  height: 20.5vh;
+  margin-left: auto;
+}
+ #container3 {
+  width: 21vh;
+  height: 23vh;
+}
+ #container4 {
+  width: 42vh;
+  height: 21vh;
+}
+#container1 {
+  width: 80vh;
+  height: 20.5vh;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+
+@media screen and (max-width: 750px) {
+  .show {
+    width: 22vh;
+    height: 22vh;
+  }
+  .show:nth-child(odd){
+      background: #FF4040;
+}
+
+.container {
+  margin: 5vh;
+}
+  #container3 {
+  width: 21vh;
+  height: 20.5vh;
+}
+ #container4 {
+  width: 21vh;
+  height: 23vh;
+}
+ #container1 {
+  width: 92vh;
+  height: 10vh;
+  margin-right: auto;
+  margin-left: 0;
+}
+#container2 {
+  width: 100%;
+  height: 21vh;
+}
+}
+
+@media screen and (max-width: 500px) {
+  .show:nth-child(even){
+      background: #FF9640;
+}
+  .show {
+    width: 2vh;
+    height: 2vh;
+  }
+
+  .container {
+  margin: 5vh;
+}
+
+  #container3 {
+  width: 21vh;
+  height: 10.5vh;
+}
+ #container4 {
+  width: 21vh;
+  height: 23vh;
+}
+ #container1 {
+  width: 20vh;
+  margin-right: 0;
+  margin-left: auto;
+  margin-top: 20vh;
+}
+#container2 {
+  width: 20vh;
+  height: 21vh;
+}
+}
+
+@media screen and (max-width: 500px) {
+  .show:nth-child(3n +1){
+      background: #FF9640;
+}
+.show:nth-child(3n){
+      background: #39E639;
+}
+  .show {
+    width: 10vh;
+    height: 10vh;
+  }
+
+  #container3 {
+  width: 21vh;
+  height: 20.5vh;
+}
+ #container4 {
+  width: 21vh;
+  height: 63vh;
+}
+ #container1 {
+  width: 60vh;
+ 
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 0vh;
+}
+#container2 {
+  width: 80vh;
+  height: 21vh;
+}
+}
+
+
+@media screen and (max-width: 320px) {
+  .show:nth-child(odd){
+      background: white;
+}
+.show:nth-child(3n){
+      background: #FF9640;
+}
+  .show {
+    width: 4vh;
+    height: 4vh;
+  }
+
+  #container3 {
+  width: 21vh;
+  height: 20.5vh;
+}
+ #container4 {
+  width: 21vh;
+  height: 63vh;
+}
+ #container1 {
+  width: 80vh;
+  height: 42vh;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20vh;
+}
+#container2 {
+
+  width: 80vh;
+  height: 21vh;
+}
+}
+
+
+

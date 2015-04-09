@@ -1,0 +1,102 @@
+* {
+	font-family: 'Inconsolata', sans-serif;
+	}
+
+		.home {
+			position: fixed;
+			top: 10px;
+			left: 10px;
+		} 
+
+		.home img {
+			width: 25px;
+			height: 25px;
+		}
+
+		.home a {
+			color:white;
+		}
+
+
+		.home a:hover {
+			color:black;
+		}
+
+
+.desc {	
+	display:block;
+	width: 320px;
+	margin: 40px auto;
+	text-align: justify;
+	}
+#test {
+	position:absolute;
+	width: 100%;
+	top: -100px;
+}
+
+#main{
+	width: 50px;
+	height: 50px;
+	-webkit-perspective: 800px;
+	-webkit-perspective-origin: 50% 50%;
+	-webkit-transform-style: preserve-3d;
+	position: relative;
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.cont {
+	-webkit-transform-style: preserve-3d;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	}
+#sq1 {
+	-webkit-animation: myfirst 2s linear infinite ;
+}
+#sq2 {
+	-webkit-animation: myfirst2 4s ease-in-out infinite ;
+}
+.box1 {
+	-webkit-transform: translate3d(0,0,25px);
+}
+
+.box2 {
+	-webkit-transform: translate3d(0,25px,0) rotateX(90deg);
+	}
+.box3 {
+	-webkit-transform: translate3d(0,0,-25px);
+	}
+.box4 {
+	-webkit-transform: translate3d(0,-25px,0) rotateX(90deg);
+	}
+.box5 {
+	-webkit-transform: translate3d(-25px,0,0) rotateY(90deg);
+	}
+.box6 {
+	-webkit-transform: translate3d(25px,0,0) rotateY(-90deg);
+	}
+.box {
+	border: 1px solid black;
+	background: red;
+	opacity: 0.8;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+}
+
+@-webkit-keyframes myfirst {
+	0% {-webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+	100% {-webkit-transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);}
+	
+}
+
+@-webkit-keyframes myfirst2{
+	0% {-webkit-transform: translate3d(0px,0,-200px) rotateY(0deg) rotateX(0deg) rotateZ(0deg);}
+	25% {-webkit-transform: translate3d(200px,0,0px) rotateY(360deg) rotateX(360deg) rotateZ(0deg);}
+	50% {-webkit-transform: translate3d(0px,0,200px) rotateY(0deg) rotateX(720deg) rotateZ(0deg);}
+	75% {-webkit-transform: translate3d(-200px,0,0px) rotateY(360deg) rotateX(1080deg) rotateZ(0deg);}
+	100% {-webkit-transform: translate3d(0px,0,-200px) rotateY(0deg) rotateX(1440deg) rotateZ(0deg);}
+	
+}

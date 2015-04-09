@@ -1,0 +1,122 @@
+
+h1
+{
+	text-align : center;	
+}
+
+ul
+{
+	list-style-type:none;
+	margin:0px	
+}
+
+li
+{
+float:left;
+}
+
+
+a:link,a:visited
+{
+	display:block;
+	width:120px;
+	font-weight:bold;
+	color: #666666;
+	background-color: #CCCCCC;
+	text-align:center;
+	padding:5px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+
+a:hover,a:active
+{
+	background-color: #666666;
+	color: #CCCCCC;
+}
+
+
+table
+{
+	border : black;
+		
+}
+
+#head2
+{
+	text-align : left;
+	margin-left : 140px;
+	font-size : 30px;
+}
+
+
+#test
+{
+	float:none;	
+	margin-right:2px;
+	margin-left:2px
+}
+
+
+#list2
+{
+	list-style-type: square;
+	margin:2px;
+	border: thin solid;
+	float: left;
+	margin-right: 10px;
+	padding: 2px
+}
+
+#link2 
+{
+	display:block;
+	width:120px;
+	font-weight:bold;
+	color: Fuchsia;
+	background-color: #CCCCCC;
+	text-align:center;
+	padding:5px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+
+#navlist{position:relative;}
+#navlist li{margin:0;padding:0;list-style:none; position:absolute; top:0; }
+#navlist a:link {height:144px; width:300px; display:block; color:none; background-color:none;} 
+#navlist a:visited {height:144px; width:300px; display:block; color:none; background-color:none;}
+
+#home{left:0px;width:290px;:height:144px}
+#home{margin: 0px; padding:0px;  color:none; background-color:none }
+#home a:link  {margin: 0px; padding:0px;width:300px; height:144px; color:black; background:url('brooks-trainers-hover.JPG') 0 0;}
+#home a:hover{margin: 0px; padding:0px;width:300px; height:144px; color:black; background:url('brooks-trainers-hover.JPG') 0 143px}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

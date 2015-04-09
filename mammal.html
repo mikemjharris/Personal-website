@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/mammal.css" type="text/css" />
+                <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+
+  </head>
+
+  <body>
+    <div class="text">
+      <div>M</div>
+      <div>A</div>
+      <div>M</div>
+      <div>M</div>
+      <div>A</div>
+      <div>L</div>
+    </div>
+    <div id="main" class="">
+      <div class="cont" id="sq1">
+        <!-- <div class="box box1">M</div> -->
+        <div class="box box2">A
+          <div class="box inside">
+
+          </div>
+        </div>
+        <div class="box box3">M
+          <div class="box inside">
+            Education
+          </div>
+        </div>
+        <div class="box box4">M
+          <div class="box inside">
+
+          </div>
+        </div>
+        <div class="box box5">A
+          <div class="box inside">
+            Engineering
+          </div>
+           <!-- <div class="box box5back">..</div> -->
+           <div class="box box1">M<div class="box inside">Operations</div>
+              <div class="box box6">L<div class="box inside">Architecture</div></div>
+           </div>
+        </div>
+        <!-- <div class="box box6">L</div> -->
+      </div>
+    </div>
+  </body>
+  <script>
+  setTimeout(function() {
+    document.getElementById('main').className += 'open'
+    setTimeout(function() {
+      document.getElementById('main').className = ''
+    }, 2000)
+  }, 6000)
+
+  setInterval(function() {
+    setTimeout(function() {
+      document.getElementById('main').className += 'open'
+      setTimeout(function() {
+        document.getElementById('main').className = ''
+      }, 1500)
+    }, 6000)
+  }, 8000)
+ </script>
+</html>

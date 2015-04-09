@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #ccc;
+}
+
+header {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: white;
+  padding-left: 20px;
+  padding-top: 10px;
+  margin-top:  20px;
+  margin-bottom: 20px;
+}
+
+header div { 
+  display: inline-block;
+  text-align: center
+  }
+
+
+header div .herotext {
+  width: 60%;
+  display: inline-block;
+}
+
+h1 {
+  margin: 1%;
+}
+.herotext h2 {
+  font-style: italic;
+  font-size: 0.75em;
+
+}
+
+main {
+  border: 1px solid black;
+  background-color: #eee;
+  width: 85%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+section img {
+  max-width: 32%;
+  display: inline-block;
+  float: right;
+  margin: 1%;
+  margin-top: 0;
+}
+
+section{
+  clear: both;
+}
+
+section p {
+  margin: 1%;
+  text-align: justify;
+}
+
+main h1 {
+  font-size: 150%;
+}
+
+main section {
+  border-top: 1px solid #888;
+}
+
+main section:first-child {
+  border-top: 0;
+}
+
+.testimonials {
+  color: #444;
+  font-style: italic;
+  padding: 2% 0;
+}
+
+section:after {
+  /*clear: both;*/
+}
+
+.one-third {
+  width: 31%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 1%;
+}
+
+.one-half {
+  width: 50%;
+  display: inline-block;
+}
+
+footer {
+  background-color: #111;
+  color: #eee;
+  font-size: 75%;
+  padding: 10px;
+  margin-top: 20px;
+}

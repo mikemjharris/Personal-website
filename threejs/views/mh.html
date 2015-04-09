@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Example 01.02 - First Scene</title>
+    <script type="text/javascript" src="../scripts/three.min.js"></script>
+    <style>
+        body{
+            /* set margin to 0 and overflow to hidden, to go fullscreen */
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Div which will hold the Output -->
+<div id="WebGL-output">
+</div>
+
+<!-- Javascript code that runs our Three.js examples -->
+<script type="text/javascript">
+
+    // once everything is loaded, we run our Three.js stuff.
+    // function init() {
+
+        // create a scene, that will hold all our elements such as objects, cameras and lights.
+        var scene = new THREE.Scene();
+
+        // create a camera, which defines where we're looking at.
+        var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+        // create a render and set the size
+        var renderer = new THREE.WebGLRenderer();
+        // renderer.setClearColorHex()
+        renderer.setClearColor(new THREE.Color(0xEEEEEE));
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        // show axes in the screen
+        var axes = new THREE.AxisHelper( 200 );
+        scene.add(axes);
+
+        // create the ground plane
+        var planeGeometry = new THREE.PlaneGeometry(20,20);
+        var planeMaterial = new THREE.MeshLambertMaterial({color: 0xcccccc , transparent: true, opacity: 0.6});
+        var plane = new THREE.Mesh(planeGeometry,planeMaterial);
+
+        // rotate and position the plane
+        // plane.rotation.x=-0.25*Math.PI;
+        plane.position.x=10
+        plane.position.y=10
+        plane.position.z=0
+
+        // add the plane to the scene
+        // scene.add(plane);
+
+        var planeGeometry = new THREE.PlaneGeometry(20,20);
+        var planeMaterial = new THREE.MeshLambertMaterial({color: 0xcccccc , transparent: true, opacity: 0.6});
+        var plane = new THREE.Mesh(planeGeometry,planeMaterial);
+
+        // rotate and position the plane
+        plane.rotation.y=0.5*Math.PI;
+        plane.position.x=0
+        plane.position.y=10
+        plane.position.z=10
+
+        // add the plane to the scene
+        // scene.add(plane);
+
+        var planeGeometry = new THREE.PlaneGeometry(20,20);
+        var planeMaterial = new THREE.MeshLambertMaterial({color: 0xcccccc , transparent: true, opacity: 0.6});
+        var plane = new THREE.Mesh(planeGeometry,planeMaterial);
+
+        // rotate and position the plane
+        plane.rotation.x=-0.5*Math.PI;
+        plane.position.x=10
+        plane.position.y=0
+        plane.position.z=10
+
+        // add the plane to the scene
+        // scene.add(plane);
+        // create a cube
+        var cubeGeometry = new THREE.BoxGeometry(4,4,7);
+        var cubeMaterial = new THREE.MeshLambertMaterial({color: 0xff0000, wireframe: false});
+        var cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+
+        // position the cube
+        cube.position.x=0;
+        cube.position.y=10;
+        cube.position.z=0;
+
+        // add the cube to the scene
+        scene.add(cube);
+
+
+        var cubes = []
+        var maxi = 60
+        for ( var i = 0; i < maxi; i++ ) {
+          var cubeGeometrys = new THREE.BoxGeometry(4,4,4);
+          var cubeMaterials = new THREE.MeshLambertMaterial({color: 0x11bb22, wireframe: false});
+          cubes[i] = new THREE.Mesh(cubeGeometrys, cubeMaterials);
+
+          // position the cube
+          cubes[i].position.x=0;
+          cubes[i].position.y=0;
+          cubes[i].position.z=(maxi/2 - i )*4.5;
+
+          // add the cube to the scene
+          scene.add(cubes[i]);
+        }
+
+
+        // create a sphere
+        var sphereGeometry = new THREE.SphereGeometry(4,30,30);
+        var sphereMaterial = new THREE.MeshLambertMaterial({color: 0x7777ff, wireframe: false});
+        var sphere = new THREE.Mesh(sphereGeometry,sphereMaterial);
+
+        // position the sphere
+        // sphere.rotation.x = 0.1*Math.PI
+        sphere.position.x=20;
+        sphere.position.y=0;
+        sphere.position.z=0;
+
+        // add the sphere to the scene
+        scene.add(sphere);
+
+        var sphereGeometry2 = new THREE.SphereGeometry(6,8,8);
+        var sphereMaterial2 = new THREE.MeshLambertMaterial({color: 0xff7777, wireframe: true});
+        var sphere2 = new THREE.Mesh(sphereGeometry2,sphereMaterial2);
+
+        // position the sphere
+
+        sphere2.position.y=0;
+        sphere2.position.y=0;
+        sphere2.position.z=20;
+
+
+
+        scene.add(sphere2)
+
+
+         var sphereGeometry3 = new THREE.SphereGeometry(6,10,10);
+        var sphereMaterial3 = new THREE.MeshPhongMaterial( { ambient: 0x030303, color: 0xdddddd, specular: 0x009900, shininess: 30, shading: THREE.FlatShading })
+        var sphere3 = new THREE.Mesh(sphereGeometry3,sphereMaterial3);
+
+        // position the sphere
+        
+        sphere3.position.y=0;
+        sphere3.position.y=0;
+        sphere3.position.z=20;
+
+
+
+        scene.add(sphere3)
+
+        var cubes = []
+        maxi = 120
+        for (var i = 0; i < maxi; i++) {
+          var cubeGeometry = new THREE.BoxGeometry(4,4,4);
+          var cubeMaterial = new THREE.MeshLambertMaterial({color: 0x66bb00, wireframe: false});
+          cubes[i] = new THREE.Mesh(cubeGeometry, cubeMaterial);
+
+        // position the cube
+          cubes[i].position.x= (maxi/2 -  i)*7;
+          cubes[i].position.y=0;
+          cubes[i].position.z=0;
+
+         // add the cube to the scene
+          scene.add(cubes[i]);
+        }
+
+      for (var i = maxi; i < 2*maxi; i++) {
+          var cubeGeometry = new THREE.BoxGeometry(4,4,4);
+          var cubeMaterial = new THREE.MeshLambertMaterial({color: 0xff0000, wireframe: false});
+          cubes[i] = new THREE.Mesh(cubeGeometry, cubeMaterial);
+
+        // position the cube
+          cubes[i].position.x=0;
+          cubes[i].position.y= (maxi/2 -  i)*7;
+          cubes[i].position.z=0;
+
+         // add the cube to the scene
+          scene.add(cubes[i]);
+        }
+
+        // var sphereGeometry3 = new THREE.SphereGeometry(4,30,30);
+        // var sphereMaterial3 = new THREE.MeshLambertMaterial({color: 0xaa66aa, wireframe: false});
+        // var sphere3 = new THREE.Mesh(sphereGeometry3,sphereMaterial3);
+
+
+        // position the sphere
+        // sphere.rotation.x = 0.1*Math.PI
+        // sphere3.position.x=40;
+        // sphere3.position.y=0;
+        // sphere3.position.z=0;
+
+        // add the sphere to the scene
+        scene.add(sphere3);
+
+
+        var directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+        directionalLight.position.set(-0.5, 1.2, 1).normalize();
+        scene.add(directionalLight);
+
+        var geometry = new THREE.Geometry();
+
+          geometry.vertices.push(
+            new THREE.Vector3( -10,  10, 0 ),
+            new THREE.Vector3( -10, -10, 0 ),
+            new THREE.Vector3(  10, -10, 0 ),
+            new THREE.Vector3(  0, 0, 0 ),
+            new THREE.Vector3(  0, 0, 40 )
+          );
+
+
+
+
+          // geometry.faces.push( new THREE.Face3( 0, 1, 2) );
+          // geometry.faces.push( new THREE.Face3( 0, 1, 3) );
+          // geometry.faces.push( new THREE.Face3( 0, 1, 4) );
+          // geometry.faces.push( new THREE.Face3( 0, 2, 3) );
+          // geometry.faces.push( new THREE.Face3( 0, 2, 4) );
+          // geometry.faces.push( new THREE.Face3( 0, 3, 4) );
+          // geometry.faces.push( new THREE.Face3( 1, 2, 3) );
+          // geometry.faces.push( new THREE.Face3( 1, 2, 4) );
+          geometry.faces.push( new THREE.Face3( 1, 3, 4) );
+          geometry.faces.push( new THREE.Face3( 2, 3, 4) );
+
+          var geomMaterial = new THREE.MeshBasicMaterial({color: 0x7777ff, wireframe: true});
+
+          geometry.computeBoundingSphere();
+
+          var geom = new THREE.Mesh(geometry, geomMaterial);
+
+          // scene.add(geom)
+
+          // var light = new THREE.AmbientLight( 0x404040 ); // soft white light
+          // scene.add( light );
+        // position and point the camera to the center of the scene
+        camera.position.x = 30;
+        camera.position.y = 40;
+        camera.position.z = 80;
+        camera.lookAt(scene.position);
+
+        // add the output of the renderer to the html element
+        document.getElementById("WebGL-output").appendChild(renderer.domElement);
+
+        // render the scene
+        // renderer.render(scene, camera);
+
+
+    // };
+    var x = 0
+    var targetRadius = 5
+
+    function render() {
+      requestAnimationFrame( render );
+      x += 0.02;
+
+      cube.rotation.y += 0.01;
+
+      for (var i = 0; i < maxi; i++) {
+        
+
+        // position the cube
+          cubes[i].position.z= (maxi/2 -  i)*(14.1 + 10*Math.sin(x));
+          cubes[i].position.y=0;
+          cubes[i].position.x=0;
+
+         // add the cube to the scene
+          // scene.add(cubes[i]);
+        }
+      // sphere.position.y=4 + 4*Math.sin(x) ;
+
+       // camera.position.x =  30*Math.sin(x);
+       // camera.position.z  = 50 +  30*Math.cos(x);
+
+
+      //   if(sphere.geometry.parameters.radius < targetRadius) {
+          scene.remove(sphere3);
+
+          sphereGeometry3 = new THREE.SphereGeometry(4 + 2*Math.sin(x),10,10);
+          // sphereMaterial = new THREE.MeshLambertMaterial({color: 0x7777ff, wireframe: false});
+          sphere3 = new THREE.Mesh(sphereGeometry3,sphereMaterial3);
+
+          sphere3.position.x=40
+          sphere3.position.y=0;
+          sphere3.position.z=-30;
+
+
+      //   // // add the sphere to the scene
+        scene.add(sphere3);
+      // }
+
+       // if(sphere.geometry.parameters.radius > targetRadius) {
+          // scene.remove(sphere);
+          // sphereGeometry = new THREE.SphereGeometry(5,30,30);
+          // sphereMaterial = new THREE.MeshLambertMaterial({color: 0x7777ff, wireframe: false});
+          // sphere = new THREE.Mesh(sphereGeometry,sphereMaterial);
+
+          sphere.position.x=20*Math.sin(x);
+          sphere.position.y=20*Math.cos(x);;
+          sphere.position.z=0;
+
+
+
+        // // add the sphere to the scene
+        // scene.add(sphere);
+      // }
+
+
+
+        for ( var i = 0; i < maxi; i++ ) {
+          // position the cube
+          cubes[i].position.x=0;
+          cubes[i].position.y=0;
+          cubes[i].position.z= (maxi/2 -  i)*(9.5 + 5*Math.sin(2*x))
+
+          // + (maxi/2 - i )*(4.5 *Math.sin(x))*2;
+
+          // add the cube to the scene
+
+        }
+
+
+
+
+
+
+
+      if ( Math.sin(x) > 0.5) {
+         targetRadius = 20
+        } else {
+          targetRadius = 5
+        }
+
+        sphere2.rotation.x = -2*Math.cos(x*4)
+        sphere2.position.x = -40*Math.cos(x)
+        sphere2.position.y = -15*Math.cos(4*x)
+
+        // camera.position.x = 30 * Math.sin(x/10)
+
+      renderer.render( scene, camera );
+}
+render();
+
+
+
+
+    // window.onload = init;
+
+</script>
+</body>
+</html>

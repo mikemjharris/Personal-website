@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="shortcut icon" href="sirrahcol.png">
+		<link rel="stylesheet" href="css/index.css"  type="text/css" />
+		<title>Mike Harris' Website</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,">
+		<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+
+		<script>
+			function DisplayDiv(divmov) {
+				document.getElementById(divmov).classList.add("large");
+			}
+
+			function CloseDiv(divclose)  {
+				document.getElementById(divclose).classList.remove("large");
+			}
+		</script>
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-36647147-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+</head>
+
+<body>
+	<img class="screenshot" src="./img/website.png" />
+	<div id="privacy_policy">
+		<a href="//www.iubenda.com/privacy-policy/216307" class="iubenda-white iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+	</div>
+		<div id="conttopgap"></div>
+		<div id="container">
+			<div class="main">
+				<div class="mainbody" id="p1" onclick="DisplayDiv('bigmain')" >
+
+					<div class="title">MIKE HARRIS
+						<p class="sub-title">Web Developer</p>
+
+					</div>
+					<div class="content"></div>
+				</div>
+		</div>
+		<div class="main" >
+				<div class="mainbody" id="p2" onclick="DisplayDiv('bigabout')">
+					<div class="title" >ABOUT</div>
+
+				</div>
+		</div>
+		<div class="main">
+				<div class="mainbody" id="p3" onclick="DisplayDiv('bigproject')">
+					<div class="title">PROJECTS</div>
+					<div class="content"> a load of stuff about me</div>
+				</div>
+		</div>
+		<div class="main">
+				<div class="mainbody" id="p4" onclick="DisplayDiv('bigcontact')">
+					<div class="title">CONTACT</div>
+					<div class="content" id="contp4">
+					</div>
+				</div>
+		</div>
+		<div id="bigabout" class="small">
+			<div class="close" onClick="CloseDiv('bigabout')"><img src="close.png"></div>
+
+			<div class="slidetext">
+				<div class="slidetitle" >ABOUT</div>
+				<br />
+				My name's Mike and I'm a web-developer, based in London.  <br /><br />
+
+				 I enjoy all the parts that make up a modern web app - my brain enjoys working on the backend, my spirit thrives on tangling with javascript and my soul loves css (as much as you can love css..). <br /><br />
+
+				 In terms of technologies I like to use the one that is best for the job - if that invloves me learning something new and interesting even better. So far I've built apps using Ruby on Rails, Node, Backbone and Angular. <br /><br />
+
+
+
+					Currently a Guiness World Record Holder. <br /><br />
+
+					You can learn more about me by reading <a href="http://mikemjharris.tumblr.com" target="_blank">my blog</a>.<br /><br />
+
+					On a slightly drier note you can head over to <a href="http://uk.linkedin.com/in/mikemjharris/" target="_blank">linkedin</a> and see what I have been up to professionally.
+			</div>
+		</div>
+
+		<div id="bigmain" class="small">
+			<div class="close" onClick="CloseDiv('bigmain')"><img src="close.png"></div>
+
+			<div class="slidetext">
+				<div class="slidetitle" >Mike Harris</div>
+					<br />
+					I'm a web-developer. See the other boxes for more about me, how to contact me and to see some of my projects. <br /><br />
+
+					Originally I built this site and you couldn't click on the box you just did.  Well you could but it didn't do anything. I even hinted at this as its border didn't change when you hovered over it. <br /><br />
+
+					It made sense.  At least to me. But not to the world. Everyone wanted to click on this box. And complained when they couldn't <br /><br />
+
+					So I made it so you could. And here you are. Not sure what I should write as everything useful is in the other boxes.  But hopefully just the fact of clicking and something appearing made you warm and fuzzy.  <br /><br />
+
+					I will probably change this page/website one day. Until I change it this will be here.  Obviously.  <br /><br />
+
+					Enjoy the rest of my site.
+
+			</div>
+		</div>
+
+		<div id="bigcontact" class="small">
+			<div class="close" onClick="CloseDiv('bigcontact')"><img src="close.png"></div>
+
+			<div class="slidetext">
+				<div class="slidetitle" >CONTACT</div>
+					<div class="contacts">
+						E-Mail: <a href="mailto:hello@mikemjharris.com" target="_blank">hello@mikemjharris.com</a><br><br>
+						Twitter: <a href="https://twitter.com/Mikemjharris" target="_blank">@mikemjharris</a><br><br>
+						Blog: <a href="http://blog.mikemjharris.com" target="_blank">blog.mikemjharris.com</a><br><br>
+						Linkedin: <a href="https://ww.linkedin.com/in/mikemjharris" target="_blank">Mike MJ Harris</a><br><br>
+					</div>
+
+			</div>
+		</div>
+		<div id="bigproject" class="small">
+			<div class="close" onClick="CloseDiv('bigproject')"><img src="close.png"></div>
+
+			<div class="slidetext">
+				<div class="slidetitle" >PROJECTS</div>
+				Some of the projects I have built on the web. I also built this site. My expertise is Ruby and Ruby on Rails - with a smattering of Javascript and lots of CSS. Recently I have been playing around with MongoDB, Express, Angular and Node.<br><br>
+				<div class="projects">
+					<ul>
+						<li><a href="svg.html">SVG Animations</a><br></li>
+		        <li><a href="http://animated-message.mikemjharris.com/">Animated Messages</a><br></li>
+						<li><a href="box.html">Box Drop Down</a><br></li>
+						<li><a href="advanced_ttt/index.html">Advanced TicTacToe</a><br></li>
+						<li><a href="http://star-wars-timeline.sirrahmj.co.uk">Star Wars Twitter Timeline</a><br></li>
+						<li><a href="boxspin.html">Spinning Box</a><br></li>
+						<li><a href="geometric-generator.html">Geometric Generator</a><br></li>
+						<li><a href="ga_projects.html">Projects While at General Assembly</a><br></li>
+						<li><a href="map.html">Maps</a><br></li>
+						<li><a href="canvasClock.html">Clock</a><br></li>
+						<li><a href="Real-O-Meter2.html">Real-o-meter</a><br></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</body>
