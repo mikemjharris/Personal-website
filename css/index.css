@@ -185,6 +185,9 @@
 		.close:hover {
 			opacity: 1;
 			}
+		.close img {
+			width: 100%;
+		}
 
 		.slidetitle{
 			text-align: center;
