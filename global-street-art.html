@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Global Street Art</title>
+  <link href='http://fonts.googleapis.com/css?family=Allerta+Stencil' rel='stylesheet' type='text/css'>
+  <style>
+  * {
+    font-family: 'Allerta Stencil', sans-serif;
+    border: 0px;
+    margin: 0px;
+  }
+
+  body {
+    text-align: center;
+  }
+  svg {
+    margin: 0 auto;
+  }
+
+  </style>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 400" width="400" height="400" version="1.0">
+      <defs>
+          <filter id="blur" x="-20%" y="-100%" width="140%" height="300%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="25" />
+          </filter>
+
+        <clipPath id="clipPath-share">
+          <text x="200" y="200" style="font-size: 50px; " text-anchor="middle"  font-family="Verdana"  >
+            HELLO
+          </text>
+        </clipPath>
+      </defs>
+
+      <g style="clip-path: url(#clipPath-share);">
+        <text x="200" y="200" style="font-size: 50px; " text-anchor="middle"  font-family="Verdana"  fill="red">
+          HELLO
+        </text>
+      </g>
+
+      <g transform="translate(0,0)">
+        <g transform="rotate(0, 200, 200)">
+          <rect x="0" y="0"
+            width="400" height="400" fill="white">
+              <animate dur="0.01s" begin="spray.end" attributeName="fill-opacity" values="1; 0" fill="freeze"/>
+             </rect>
+            <path d="M100, 125 l205 0 l-195 5 l200 13 l-205 10 l200 10 l-210 10 l215 14 l-205 10 l205 10 l-200 10 l205 9 l-200 10 l205 9 " fill="none" stroke="red" stroke-width="30" filter="url(#blur)" stroke-dasharray="100, 0" >
+              <animate id="spray" dur="2s"  attributeName="stroke-dasharray" values="0, 10000; 5000, 10000" fill="freeze"/>
+          </path>
+          <g>
+            <text x="200" y="200" style="font-size: 50px; " text-anchor="middle"  font-family="Verdana"  fill="white" fill-opacity="0">
+              HELLO
+              <animate dur="0.01s" begin="spray.end" attributeName="fill-opacity" values="0; 1" fill="freeze"/>
+            </text>
+
+          </g>
+          <animateTransform attributeName="transform"
+           attributeType="XML"
+           type="rotate"
+           from="0 200 200"
+           to="1080 200 200"
+           dur="3s"
+           begin="spray.end"/>
+        </g>
+          <animateTransform attributeName="transform"
+            attributeType="XML"
+            type="translate"
+            values="0, 0; 0, -800"
+            dur="3s"
+             begin="spray.end"
+             fill="freeze"
+          />
+        </g>
+
+
+  </svg>
+
+
+
+
+</body>
+</html>
