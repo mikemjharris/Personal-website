@@ -23,17 +23,28 @@
     <div class="cont" id="set">Go 3D</div>
     <h1>Ultimate TicTacToe</h1>
     <main ng-controller="tttController">
-      <aside>
-        <h2>Game Status</h2>
-        <div class="message">&nbsp{{ message }}</div>
-        <div class="message">&nbsp{{ messageWinner }}</div>
-      </aside>
       <div class="controls">
         <div class="button" id="left">Left</div>
         <div class="button" id="up">Up</div>
         <div class="button" id="down">Down</div>
         <div class="button" id="right">Right</div>
       </div>
+      <aside>
+        <h2>Game Status</h2>
+        <div class="message">&nbsp{{ message }}</div>
+        <div class="message">&nbsp{{ messageWinner }}</div>
+        <div class="hide">
+          <h2>Ultimate TicTacToe</h2>
+          <p>Like normal TicTacToe but bigger and better.<P>
+          <ul>
+            <li>The aim is to win on the big board.</li>
+            <li>To make a square yours you need to win the small game within that square.</li>
+            <li>The last played square on a small board determines which big square is played next.</li>
+            <li>e.g. Say O's plays the middle big square.  On the small board within they play middle left, X has to make a move in the small game inside the big board's middle left square</li>
+          </ul>
+        </div>
+      </aside>
+
       <div class="holder">
         <div class="core">
           <div class="master_game_container">
@@ -46,16 +57,6 @@
           </div>
         </div>
       </div>
-      <aside class="hide">
-        <h2>Ultimate TicTacToe</h2>
-        <p>Like normal TicTacToe but bigger and better.<P>
-        <ul>
-          <li>The aim is to win on the big board.</li>
-          <li>To make a square yours you need to win the small game within that square.</li>
-          <li>The last played square on a small board determines which big square is played next.</li>
-          <li>e.g. Say O's plays the middle big square.  On the small board within they play middle left, X has to make a move in the small game inside the big board's middle left square</li>
-        </ul>
-      </aside>
     </main>
   </body>
 </html>
