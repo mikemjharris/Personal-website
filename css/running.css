@@ -1,0 +1,106 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  font-family: 'Spinnaker', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 960px;
+}
+
+header {
+  padding: 10px;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+}
+
+
+section {
+  position: relative;
+  margin: 0 20px 0 0; 
+}
+
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: hsla(120, 60%, 50%, 1);
+  border-bottom: 1px solid hsla(120, 60%, 50%, 1);
+  transition: all 0.4s;
+}
+
+a:hover {
+  color: hsla(120, 60%, 40%, 1);
+}
+
+.split {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin: 20px;
+}
+
+p {
+  padding: 10px 0px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+img {
+  flex-grow: 1;
+}
+.donate {
+  display: inline-block;
+  background: hsla(240, 40%, 50%, 1);
+  padding: 20px;
+  color: hsla(240, 40%, 85%, 1);
+  transition: all 0.3s;
+  text-decoration: none;
+  margin: 0 0 20px 0px;
+  border: 1px solid hsla(240, 40%, 85%, 1);
+}
+
+.donate:hover {
+  background: hsla(240, 40%, 60%, 1);
+  color: hsla(240, 40%, 90%, 1);
+}
+
+.image-title {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    flex-direction: column;
+  }
+  .split {
+    flex-direction: column;
+  } 
+
+  .donate {
+    margin: 20px 0 0 0;
+  }
+}
