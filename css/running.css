@@ -126,5 +126,6 @@ img {
 
 .pics img {
   max-width: 400px;
-  margin: 20px;
+  width: calc(100% - 20px);
+  margin: 10px;
 }
