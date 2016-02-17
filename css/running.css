@@ -113,6 +113,10 @@ img {
     margin: 10px;
     padding: 10px;
   }
+  .vertical-center {
+    margin: 10px;
+    padding: 10px; 
+  }
 }
 
 .pics h1 {
