@@ -7,7 +7,6 @@
 		<title>Mike Harris' Website</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,">
 
-
 		<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 
 		<script>
@@ -19,21 +18,22 @@
 				document.getElementById(divclose).classList.remove("large");
 			}
 		</script>
-		<script type="text/javascript">
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-36647147-1']);
-		  _gaq.push(['_trackPageview']);
 
-		  (function() {
-		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
+			<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-36647147-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
 		</script>
-</head>
+	</head>
 
-<body>
-	<img class="screenshot" src="./img/website.png" />
+	<body>
+		<img class="screenshot" src="./img/website.png" />
 
 		<div id="conttopgap"></div>
 		<div id="container">
@@ -46,58 +46,58 @@
 					</div>
 					<div class="content"></div>
 				</div>
-		</div>
-		<div class="main" >
+			</div>
+			<div class="main" >
 				<div class="mainbody" id="p2" onclick="displayDiv('bigabout')">
 					<div class="title" >ABOUT</div>
 
 				</div>
-		</div>
-		<div class="main">
+			</div>
+			<div class="main">
 				<div class="mainbody" id="p3" onclick="displayDiv('bigproject')">
 					<div class="title">PROJECTS</div>
 					<div class="content"> a load of stuff about me</div>
 				</div>
-		</div>
-		<div class="main">
+			</div>
+			<div class="main">
 				<!-- this was the contact section.  Then it changed to the blog.  I haven't changed the ids yet... -->
 				<div class="mainbody" id="p4" onclick="displayDiv('bigcontact')">
 					<div class="title">BLOG</div>
 					<div class="content" id="contp4">
 					</div>
 				</div>
-		</div>
-		<div id="bigabout" class="small">
-			<div class="close" onClick="closeDiv('bigabout')"><img src="close.png"></div>
-
-			<div class="slidetext">
-				<div class="slidetitle" >ABOUT</div>
-				<br />
-				My name's Mike and I'm a software engineer, currently based in London.  <br /><br />
-
-				I build things with code and am happy to straddle the full stack of modern web development.  Be that java based services, legacy php code (urgh), modern JS frameworks and architecting CSS solutions. Most things end up running in docker.
-
-				This website contains more of my visual side projects such as playing around with SVG and CSS and making pretty things move with both.
-
-				You can learn more about what interests me and what I am currently working with by reading <a href="http://blog.mikemjharris.com" target="_blank">my blog</a>.<br /><br />
-
-				Please feel free to contact me - love chatting and discussing pretty much anything and happy to offer advice or tuition on anything you feel I may be able to help with. In particular I can help if you are looking to learn to code having worked with organisations such as General Assembly or Mum's in tech.
-				<br><br>
-
-						E-Mail: <a href="mailto:hello@mikemjharris.com" target="_blank">hello@mikemjharris.com</a><br><br>
-						Twitter: <a href="https://twitter.com/Mikemjharris" target="_blank">@mikemjharris</a><br><br>
-						Blog: <a href="http://blog.mikemjharris.com" target="_blank">blog.mikemjharris.com</a><br><br>
-						Github: <a href="https://github.com/mikemjharris" target="_blank">mikemjharris</a><br><br>
-						Linkedin: <a href="https://www.linkedin.com/in/mikemjharris" target="_blank">Mike MJ Harris</a><br><br>
-
 			</div>
-		</div>
+			<div id="bigabout" class="small">
+				<div class="close" onClick="closeDiv('bigabout')"><img src="close.png"></div>
 
-		<div id="bigmain" class="small">
-			<div class="close" onClick="closeDiv('bigmain')"><img src="close.png"></div>
+				<div class="slidetext">
+					<div class="slidetitle" >ABOUT</div>
+					<br />
+					My name's Mike and I'm a software engineer, currently based in London.  <br /><br />
 
-			<div class="slidetext">
-				<div class="slidetitle" >Mike Harris</div>
+					I build things with code and am happy to straddle the full stack of modern web development.  Be that java based services, legacy php code (urgh), modern JS frameworks and architecting CSS solutions. Most things end up running in docker.
+
+					This website contains more of my visual side projects such as playing around with SVG and CSS and making pretty things move with both.
+
+					You can learn more about what interests me and what I am currently working with by reading <a href="http://blog.mikemjharris.com" target="_blank">my blog</a>.<br /><br />
+
+					Please feel free to contact me - love chatting and discussing pretty much anything and happy to offer advice or tuition on anything you feel I may be able to help with. In particular I can help if you are looking to learn to code having worked with organisations such as General Assembly or Mum's in tech.
+					<br><br>
+
+					E-Mail: <a href="mailto:hello@mikemjharris.com" target="_blank">hello@mikemjharris.com</a><br><br>
+					Twitter: <a href="https://twitter.com/Mikemjharris" target="_blank">@mikemjharris</a><br><br>
+					Blog: <a href="http://blog.mikemjharris.com" target="_blank">blog.mikemjharris.com</a><br><br>
+					Github: <a href="https://github.com/mikemjharris" target="_blank">mikemjharris</a><br><br>
+					Linkedin: <a href="https://www.linkedin.com/in/mikemjharris" target="_blank">Mike MJ Harris</a><br><br>
+
+				</div>
+			</div>
+
+			<div id="bigmain" class="small">
+				<div class="close" onClick="closeDiv('bigmain')"><img src="close.png"></div>
+
+				<div class="slidetext">
+					<div class="slidetitle" >Mike Harris</div>
 					<br />
 					I'm a web-developer. See the other boxes for more about me, how to contact me and to see some of my projects. <br /><br />
 
@@ -111,46 +111,47 @@
 
 					Enjoy the rest of my site.
 
+				</div>
 			</div>
-		</div>
 
-		<div id="bigcontact" class="small">
-			<div class="close" onClick="closeDiv('bigcontact')"><img src="close.png"></div>
+			<div id="bigcontact" class="small">
+				<div class="close" onClick="closeDiv('bigcontact')"><img src="close.png"></div>
 
-			<div class="slidetext">
-				<div class="slidetitle" >BLOG</div>
+				<div class="slidetext">
+					<div class="slidetitle" >BLOG</div>
 					<div class="contacts">
 						My Blog: <a href="http://blog.mikemjharris.com" target="_blank">blog.mikemjharris.com</a><br><br>
 
 						A split between technical posts - such as the infrastructure behind the blog and CD/CI - and more thought posts.  Working out at about a post every other month. It's mostly interesting stuff for me but you may find the odd bit useful.
 					</div>
-			</div>
-		</div>
-		<div id="bigproject" class="small">
-			<div class="close" onClick="closeDiv('bigproject')"><img src="close.png"></div>
-
-			<div class="slidetext">
-				<div class="slidetitle" >PROJECTS</div>
-				Some of the projects I have built on the web. I also built this site. My expertise is Ruby and Ruby on Rails - with a smattering of Javascript and lots of CSS. Recently I have been playing around with MongoDB, Express, Angular and Node.<br><br>
-				<div class="projects">
-					<ul>
-						<li><a href="svg.html">SVG Animations</a><br></li>
-		        <li><a href="http://animated-message.mikemjharris.com/">Animated Messages</a><br></li>
-		        <li><a href="http://snowman.mikemjharris.com/">3d Snowman Game</a><br></li>
-						<li><a href="box.html">Box Drop Down</a><br></li>
-						<li><a href="advanced_ttt/index.html">Advanced TicTacToe</a><br></li>
-						<li><a href="http://star-wars-timeline.mikemjharris.com">Star Wars Twitter Timeline</a><br></li>
-						<li><a href="boxspin.html">Spinning Box</a><br></li>
-						<li><a href="geometric-generator.html">Geometric Generator</a><br></li>
-						<li><a href="ga_projects.html">Projects While at General Assembly</a><br></li>
-						<li><a href="map.html">Maps</a><br></li>
-						<li><a href="canvasClock.html">Clock</a><br></li>
-						<li><a href="Real-O-Meter2.html">Real-o-meter</a><br></li>
-					</ul>
 				</div>
+			</div>
+			<div id="bigproject" class="small">
+				<div class="close" onClick="closeDiv('bigproject')"><img src="close.png"></div>
 
+				<div class="slidetext">
+					<div class="slidetitle" >PROJECTS</div>
+					Some of the projects I have built on the web. I also built this site. My expertise is Ruby and Ruby on Rails - with a smattering of Javascript and lots of CSS. Recently I have been playing around with MongoDB, Express, Angular and Node.<br><br>
+					<div class="projects">
+						<ul>
+							<li><a href="svg.html">SVG Animations</a><br></li>
+							<li><a href="http://animated-message.mikemjharris.com/">Animated Messages</a><br></li>
+							<li><a href="http://snowman.mikemjharris.com/">3d Snowman Game</a><br></li>
+							<li><a href="box.html">Box Drop Down</a><br></li>
+							<li><a href="advanced_ttt/index.html">Advanced TicTacToe</a><br></li>
+							<li><a href="http://star-wars-timeline.mikemjharris.com">Star Wars Twitter Timeline</a><br></li>
+							<li><a href="boxspin.html">Spinning Box</a><br></li>
+							<li><a href="geometric-generator.html">Geometric Generator</a><br></li>
+							<li><a href="ga_projects.html">Projects While at General Assembly</a><br></li>
+							<li><a href="map.html">Maps</a><br></li>
+							<li><a href="canvasClock.html">Clock</a><br></li>
+							<li><a href="Real-O-Meter2.html">Real-o-meter</a><br></li>
+						</ul>
+					</div>
+
+				</div>
 			</div>
 		</div>
-	</div>
-	<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-</body>
+		<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+	</body>
+</html>
