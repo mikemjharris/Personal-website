@@ -11,11 +11,11 @@
 		<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 
 		<script>
-			function DisplayDiv(divmov) {
+			function displayDiv(divmov) {
 				document.getElementById(divmov).classList.add("large");
 			}
 
-			function CloseDiv(divclose)  {
+			function closeDiv(divclose)  {
 				document.getElementById(divclose).classList.remove("large");
 			}
 		</script>
@@ -38,7 +38,7 @@
 		<div id="conttopgap"></div>
 		<div id="container">
 			<div class="main">
-				<div class="mainbody" id="p1" onclick="DisplayDiv('bigmain')" >
+				<div class="mainbody" id="p1" onclick="displayDiv('bigmain')" >
 
 					<div class="title">MIKE HARRIS
 						<p class="sub-title">Web Developer</p>
@@ -48,27 +48,27 @@
 				</div>
 		</div>
 		<div class="main" >
-				<div class="mainbody" id="p2" onclick="DisplayDiv('bigabout')">
+				<div class="mainbody" id="p2" onclick="displayDiv('bigabout')">
 					<div class="title" >ABOUT</div>
 
 				</div>
 		</div>
 		<div class="main">
-				<div class="mainbody" id="p3" onclick="DisplayDiv('bigproject')">
+				<div class="mainbody" id="p3" onclick="displayDiv('bigproject')">
 					<div class="title">PROJECTS</div>
 					<div class="content"> a load of stuff about me</div>
 				</div>
 		</div>
 		<div class="main">
 				<!-- this was the contact section.  Then it changed to the blog.  I haven't changed the ids yet... -->
-				<div class="mainbody" id="p4" onclick="DisplayDiv('bigcontact')">
+				<div class="mainbody" id="p4" onclick="displayDiv('bigcontact')">
 					<div class="title">BLOG</div>
 					<div class="content" id="contp4">
 					</div>
 				</div>
 		</div>
 		<div id="bigabout" class="small">
-			<div class="close" onClick="CloseDiv('bigabout')"><img src="close.png"></div>
+			<div class="close" onClick="closeDiv('bigabout')"><img src="close.png"></div>
 
 			<div class="slidetext">
 				<div class="slidetitle" >ABOUT</div>
@@ -92,7 +92,7 @@
 		</div>
 
 		<div id="bigmain" class="small">
-			<div class="close" onClick="CloseDiv('bigmain')"><img src="close.png"></div>
+			<div class="close" onClick="closeDiv('bigmain')"><img src="close.png"></div>
 
 			<div class="slidetext">
 				<div class="slidetitle" >Mike Harris</div>
@@ -113,7 +113,7 @@
 		</div>
 
 		<div id="bigcontact" class="small">
-			<div class="close" onClick="CloseDiv('bigcontact')"><img src="close.png"></div>
+			<div class="close" onClick="closeDiv('bigcontact')"><img src="close.png"></div>
 
 			<div class="slidetext">
 				<div class="slidetitle" >BLOG</div>
@@ -125,7 +125,7 @@
 			</div>
 		</div>
 		<div id="bigproject" class="small">
-			<div class="close" onClick="CloseDiv('bigproject')"><img src="close.png"></div>
+			<div class="close" onClick="closeDiv('bigproject')"><img src="close.png"></div>
 
 			<div class="slidetext">
 				<div class="slidetitle" >PROJECTS</div>
