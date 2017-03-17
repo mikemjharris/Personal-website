@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<!--My application project for GA WDI. I had allot of fun making this. I hopw you enjoy it! -->
+<!--My application project for GA WDI. I had allot of fun making this. I hope you enjoy it! -->
+
+<!--This page works on chrome, firefox and safari. I have taken the liberty of using the GA logo.-->
+
+<!--The page is designed to have a single box header with title, GA symbol and menu buttons.  Hitting either
+	button will zoom in or out the relevant section.  The spin button is just a bit of fun -->
 <head>
 	<script type="text/javascript">
 
@@ -15,7 +20,7 @@
 
 </script>
 	<style>
-	/*reset all margins and padding to 0 - I like to work from a standard base */
+	/* Reset all margins and padding to 0. */
 	* {
 		margin: 0;
 		padding: 0;
@@ -24,7 +29,7 @@
 		-moz-box-sizing:border-box;
 	}
 
-	/* header formating */
+	/* Header formatting. */
 	header {
 		position: relative;
 		text-align: center;
@@ -38,7 +43,7 @@
 		-webkit-transition: -webkit-transform 0.75s ease-in-out;
 	}
 	
-	/* The holes behind the circles on the header*/
+	/* The holes behind the circles on the header. */
 	.hole {
 		width: 100px;
 		height: 100px;
@@ -55,7 +60,7 @@
 		right: 5px;
 	}
 	
-	/*these are the divs that hold pictures and the GA symbol.*/
+	/* These are the divs that hold pictures and the GA symbol. */
 	#leftSide, #rightSide {
 		width: 100px;
 		height: 100px;
@@ -71,7 +76,7 @@
 		left: auto;
 		right: 5px;
 	}
-	/* Formating for both the pictures and the GA symbol */
+	/* Formatting for both the pictures and the GA symbol. */
 	header img {
 		width: 100px;
 		height: 100px;
@@ -80,7 +85,7 @@
 		background: white;
 	}
 	
-	/* pictures of me - rotated 180 deg so are right way round when parent div rotates */
+	/* Pictures of me - rotated 180 deg so are right way round when parent div rotates. */
 	.pic {	
 		position:absolute;
 		top: 0px;
@@ -90,23 +95,23 @@
 		-webkit-transform: rotateY(180deg);
 	}
 	
-	/* Added to the picture so it isn't hidden by the GA symbol after it rotates*/
+	/* Added to the picture so it isn't hidden by the GA symbol after it rotates. */
 	.layer {
 		z-index: 5;
 	}
-	/* Used to rotate the images*/
+	/* Used to rotate the images. */
 	.rotate {	
 		transform: rotateY(180deg);
 		-webkit-transform: rotateY(180deg);
 	}
-	/* Class used to spin img/header elements */
+	/* Class used to spin img/header elements. */
 	.spin {
 		transform: rotate(720deg);
 		-webkit-transform: rotate(720deg);
 		z-index: 0;
 	}
 	
-	/* title formating */
+	/* Title formatting. */
 	h1 {
 		margin-bottom: 10px;
 	}
@@ -118,14 +123,14 @@
 		margin-top: 50px;
 	}
 	h3 {
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 	}
 	
 	p  {
 		margin-bottom: 20px;
 	}
 	
-	/* Navigation button formatting */
+	/* Navigation button formatting. */
 	nav {
 		margin-top: 15px;
 	}
@@ -150,17 +155,17 @@
 	nav a:hover {
 		background: #84B9B9
 	}
-	/* Used to highlight active link*/	
+	/* Used to highlight active link. */	
 	.highlight {
 		border: 1px solid white;
 	}
 
-	/* Counts how many times the containers have been spun - supposed to be hidden */
+	/* Counts how many times the containers have been spun - supposed to be hidden. */
 	#counter {
 		display:none;
 	}
 		
-	/* Body formatting */
+	/* Body formatting. */
 	#about, #contact {
 		position: relative;
 		text-align: center;
@@ -181,7 +186,7 @@
 		text-align: left;
 	}
 
-	/*Style the links in the contact section */
+	/* Style the links in the contact section. */
 	#contact a {
 		text-decoration: none;
 		color: white;	
@@ -202,7 +207,7 @@
 		display: inline-block;
 	}
 	
-	/* The 3d space that the content andabout sections sit in */
+	/* The 3d space that the content and about sections sit in. */
 	#envo  {
 		max-width: 700px;
 		z-index: 50;
@@ -216,7 +221,7 @@
 		-webkit-transform-style: preserve-3d;
 	}
 
-	/*The formating for the about and contact sections when they are far away*/
+	/* The formatting for the about and contact sections when they are far away. */
 	.far {
 		z-index: 1000000;
 		opacity: 0;
@@ -224,7 +229,6 @@
 		-webkit-transform: translate3d(-1300px,-200px,-10000px);
 	}
 
-	
 	.farcontact {
 		z-index: 100000;
 		opacity: 0;
@@ -232,14 +236,14 @@
 		-webkit-transform: translate3d(0,-200px,-10000px);
 	}
 	
-	/*Fake div so that scroll bars are automatically included when page opens (prevents page judder)*/
+	/* Fake div so that scroll bars are automatically included when page opens (prevents page judder). */
 	#spacing {
 		position: absolute;
 		height: 1000px;
 		border: 1px solid white;
 	}
 
-	/*for smaller screen removes pictures and spin button. Alters where the about and contact sections come from*/
+	/*f For smaller screen removes pictures and spin button. Alters where the about and contact sections come from */
 	@media (max-width: 580px) {
 	#leftSide, #rightSide, .hole , #spinLi{
 			display: none;
@@ -254,31 +258,28 @@
 		transform: translate3d(800px,-200px,-10000px);
 		-webkit-transform: translate3d(800px,-200px,-10000px);
 	}
-	 
-	}
-
-	
-</style>
-
+	 	
+	</style>
 </head>
+
 <body>
 
-<!--Main header with navigation buttons - added an ID so can select the header tag and add a 'spin' class in javascript-->
+	<!--Main header with navigation buttons - added an ID so can select the header tag and add a 'spin' class in javascript-->
 	<header id="mainHead">
 		<h1>Mike Harris</h1>
+		
 		<!--left GA symbol and personal photo. The "hole" is the white hole behind the picture -->
 		<div class="hole"></div>
 		<div id="leftSide">
 			<img  id="img_left" class="spin" src="GA.png">
-			<img  id="picleft" class="pic" src="MikeHarris1.png">
+			<img  id="picleft" class="pic" src="../img/MikeHarris1.png">
 		</div>
 	
 		<!--Right GA symbol and personal photo-->
 		<div class="hole" id="hole_right"></div>
-	
 		<div id="rightSide">
 			<img  id="img_right" class="spin" src="GA.png">
-			<img  id="picright" class="pic" src="MikeHarris2.png">
+			<img  id="picright" class="pic" src="../img/MikeHarris2.png">
 		</div>
 	
 		<h2>GA London WDI Admission Application</h2>
@@ -286,9 +287,9 @@
 		<!-- Menu system. The spin button is just a bit of fun and a way to show off CSS3 transforms. -->
 		<nav>
 			<ul>
-				<li><a href="#" id="aboutlink"onclick="flipIt()">About</a></li>
+				<li><a href="#" id="aboutlink"onclick="about()">About</a></li>
 				<li><a href="#"  id="contactlink" onclick="contact()">Contact</a></li>
-				<li id="spinLi"><a href="#" onclick="spinMe()" id="spinButton">Spin</a></li>
+				<li id="spinLi"><a href="#" title="Spin!" onclick="spin()" id="spinButton">Spin</a></li>
 			</ul>
 		</nav>
 		<!-- bit of a hack to store the number of times the spin button has been pushed -->
@@ -299,68 +300,59 @@
 	<div id="envo">
 		<div id="about" class="far">
 			<h3>About</h3>
-			<!--<div id="aboutContent">-->
 				<h4>Who am I?</h4>
 				<p>My name is Mike, I live in London and am in my early 30's. At school my main interests were in the sciences
 					where I did well enough to go to university. There I split my time between maths and rowing and then ventured 
-					into the world of finance.  Professionally I have been there ever since in a variety of roles. In my personal
-					life I enjoy running, have slowly discovered the benefits of yoga and enjoy reading (obviously I also enjoy playing
-					around with computers but that's for the next section!) My crowning achievement in life so far was to achieve a Guinness
+					into the world of finance where I have enjoyed a variety of roles. In my personal life I enjoy running, have 
+					slowly discovered the benefits of yoga and enjoy reading (obviously I also enjoy playing around with computers
+					but that's for the next section!). My crowning achievement in life so far was to achieve a Guinness
 					world record last year. 
 				</p>
 			
 				<h4>Why do I want to learn to code?</h4>
 				<p>	When given this project to apply for the GA WDI I had the full story ready: played with code when younger, 
-					dabbled  with VBA at work, always hankered after learning more but bar some code-academy and building my own 
+					dabbled  with VBA at work, always hankered after learning more but bar some codeacademy and building my own 
 					web page never made the time to become an expert. Came to the realisation that programming is what I enjoy and 
 					what I wanted to do with my life.
 				</p>
 		
 				<p>	Knowing that the content was sorted I set about building the structure of the webpage. And then the project took over.
 					I wanted to add a div here, tweak the formatting there, stick in some javascript to show what I could do. At each step
-					I found new things I hadn't done before.  I had an idea of how I wanted the page to work and if at the first go I didn't 
+					I found new things I hadn't done before.  I had an idea of how I wanted the page to work and if at first I didn't 
 					succeed I tried something different. I couldn't wait for my coffee breaks, home time, evenings so I could attempt to jump 
 					the next hurdle in my way. I loved the whole process both the logic needed and the creativity in coming up with solutions.
 				</p>
 				
-				<p>	Tackling this mini project showed me how much I enjoy the process of coding and is an answer in itself as to why I want to 
-				invest more time, money and energy in learning more and making a career and a life out of it.</p>
+				<p>	I realised the story of how I got here didn't really matter. Tackling this mini project showed me how much I enjoy the 
+					process of coding and is an answer in itself as to why I want to invest more time, money and energy in learning more and 
+					making a career and a life out of it.</p>
 			
 				<h4>Why GA?</h4>
-				<p>	A few things about GA stood out from the crowd - their global reach, the wide range of other programs they offer and their
-					approach to getting employers in. Even more important was the great response I got from my 
+				<p>	A few things about GA stood out from the crowd - their global reach, the wide range of other programs they offer and their method
+					of providing future job opportunities.</p>
+				    
+				<p>	Even more important was the great response I got from my 
 					initial online interest - a personal phone call, email and also a discussion with a newly graduated WDI student. Inspiring!
 				</p>
 		</div>
 
-
 		<div id="contact" class="farcontact">
 			<h3>Contact</h3>
-	<!--I split the contact details into two divs so that the ":"s would be in line. If the screen is not wide enough things don't line up. 
-		The commented out area with id="contactContent" is the alternative--->
-	<!--
-	<div id="contactContent">
-		<p>Email: <a href="mailto:mike.mj.harris@gmail.com">mike.mj.harris@gmail.com</a></p>
-		<p>Mobile: <a href="#">07967 271953</a></p>
-		<p>Personal twitter: <a href="http://www.twitter.com/mikemjharris">@mikemjharris</a></p>
-		<p>Tech twitter: <a href="http://www.twitter.com/mikesirrah">@mikesirrah</a></p>
-		<p>Personal Webpage: <a href="http://www.sirrahmj.co.uk">www.sirrahmj.co.uk</a></p>
-	</div>
-	-->
+			<!--The contact details are split into two divs so that the ":"s would be in line. -->
 			<div id="contactContentleft">
 				<p>Email:</p>
-				<p>Mobile:</p>
-				<p>Personal twitter:</p>
-				<p>Tech twitter:</p>
+				<!--<p>Mobile:</p>-->
+				<p>Twitter:</p>
+				<!--<p>Tech twitter:</p>-->
 				<p>My Webpage:</p>
 			</div>
 		
 			<div id="contactContentright">
-				<p><a href="mailto:mike.mj.harris@gmail.com">mike.mj.harris@gmail.com</a></p>
-				<p><a href="#">07967 271953</a></p>
+				<p><a href="mailto:">mike.******@gmail.com</a></p>
+				<!--<p><a href="#"></a></p>-->
 				<p><a href="http://www.twitter.com/mikemjharris">@mikemjharris</a></p>
-				<p><a href="http://www.twitter.com/mikesirrah">@mikesirrah</a></p>
-				<p><a href="http://www.sirrahmj.co.uk">www.sirrahmj.co.uk</a></p>
+				<!--<p><a href="http://www.twitter.com/mikesirrah">@mikesirrah</a></p>-->
+				<p><a href="http://www.mikemjharris.com">www.mikemjharris.com</a></p>
 			</div>
 
 		</div>
@@ -376,63 +368,66 @@
 
 
 <script>
-function flipIt() {
-		if (!(document.getElementById("contact").classList.contains("farcontact")))
-			{
-				contact();
-			}
+
+function about() {
+			//Zooms in/out about section, hides contact section, highlights about button
+			if (!(document.getElementById("contact").classList.contains("farcontact")))
+				{
+					contact();
+				}
 		
-		document.getElementById("aboutlink").classList.toggle("highlight");
-		document.getElementById("leftSide").classList.toggle("rotate");
-		document.getElementById("rightSide").classList.toggle("rotate");
-		setTimeout(function() {
-			document.getElementById("picleft").classList.toggle("layer");
-			document.getElementById("picright").classList.toggle("layer");
-			} , 750);
-		zoom();
+			document.getElementById("aboutlink").classList.toggle("highlight");
+			document.getElementById("leftSide").classList.toggle("rotate");
+			document.getElementById("rightSide").classList.toggle("rotate");
+		
+			//Half way through the rotation brings the behind picture to the front
+			setTimeout(function() {
+				document.getElementById("picleft").classList.toggle("layer");
+				document.getElementById("picright").classList.toggle("layer");
+				} , 750);
+			
+			document.getElementById("about").classList.toggle("far");
 		}
 		
 function contact() {
-		if (!(document.getElementById("about").classList.contains("far")))
-			{
-				flipIt()
-			}
+		//Zooms in/out contact section, hides about section, highlights contact button
+			if (!(document.getElementById("about").classList.contains("far")))
+				{
+					about()
+				}
 			
-		document.getElementById("contact").classList.toggle("farcontact");
-		document.getElementById("contactlink").classList.toggle("highlight");
-		if (document.getElementById("leftSide").classList.contains("rotate")) {
-			document.getElementById("leftSide").classList.remove("rotate");
-			document.getElementById("rightSide").classList.remove("rotate")
-			document.getElementById("picleft").classList.remove("layer");
-			document.getElementById("picright").classList.remove("layer");
-		}
-		document.getElementById("leftSide").classList.toggle("spin");
-		document.getElementById("rightSide").classList.toggle("spin");
+			document.getElementById("contact").classList.toggle("farcontact");
+			document.getElementById("contactlink").classList.toggle("highlight");
+		
+			if (document.getElementById("leftSide").classList.contains("rotate")) {
+				document.getElementById("leftSide").classList.remove("rotate");
+				document.getElementById("rightSide").classList.remove("rotate")
+				document.getElementById("picleft").classList.remove("layer");
+				document.getElementById("picright").classList.remove("layer");
+				}
+			document.getElementById("leftSide").classList.toggle("spin");
+			document.getElementById("rightSide").classList.toggle("spin");
 		}
 
-function spinMe()
-	{
-		if (document.getElementById("counter").innerHTML.length > 10 )
-		{
-			alert("Sorry - that's enough spins for you today.");
-		}
-		else 
-		{
+function spin() {
+			if (document.getElementById("counter").innerHTML.length > 1 )
+			{
+				alert("Sorry - that's enough spins for you today.");
+			}
+			else 
+			{
 		
-		document.getElementById("leftSide").classList.toggle("spin");
-		document.getElementById("rightSide").classList.toggle("spin");
-		document.getElementById("mainHead").classList.toggle("spin");
-		document.getElementById("counter").innerHTML=document.getElementById("counter").innerHTML + 1;
-		setTimeout(function() {
-				document.getElementById("spinButton").innerHTML="Again!";
+				document.getElementById("leftSide").classList.toggle("spin");
+				document.getElementById("rightSide").classList.toggle("spin");
+				document.getElementById("mainHead").classList.toggle("spin");
+				document.getElementById("counter").innerHTML=document.getElementById("counter").innerHTML + 1;
+				setTimeout(function() {
+					document.getElementById("spinButton").innerHTML="Again!";
 				},800);
-		}
+			}
 	}
 
-function zoom() {
-		document.getElementById("about").classList.toggle("far");
-		}
-		
+	
 </script>
 
 </body>
