@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 		for (var i = 1; i < 42; i++) {
 		var imgadd = "img_" + i + ".jpg";
-		var linkadd = '<img class="allpic" src=img/' + imgadd + ' />';
+		var linkadd = '<img class="allpic" src=../img/' + imgadd + ' />';
 
 		$(".picbox").append(linkadd);
 
