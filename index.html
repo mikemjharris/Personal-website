@@ -35,124 +35,125 @@
 	<body>
 		<img class="screenshot" src="./img/website.png" />
 
-		<div id="conttopgap"></div>
-		<div id="container">
-			<div class="main">
-				<div class="mainbody" id="p1" onclick="displayDiv('bigmain')" >
+		<section>
+			<div id="container">
+				<div class="main">
+					<div class="mainbody" id="p1" onclick="displayDiv('bigmain')" >
 
-					<div class="title">MIKE HARRIS
-						<p class="sub-title">Web Developer</p>
+						<div class="title">MIKE HARRIS
+							<p class="sub-title">Web Developer</p>
 
-					</div>
-					<div class="content"></div>
-				</div>
-			</div>
-			<div class="main" >
-				<div class="mainbody" id="p2" onclick="displayDiv('bigabout')">
-					<div class="title" >ABOUT</div>
-
-				</div>
-			</div>
-			<div class="main">
-				<div class="mainbody" id="p3" onclick="displayDiv('bigproject')">
-					<div class="title">PROJECTS</div>
-					<div class="content"> a load of stuff about me</div>
-				</div>
-			</div>
-			<div class="main">
-				<!-- this was the contact section.  Then it changed to the blog.  I haven't changed the ids yet... -->
-				<div class="mainbody" id="p4" onclick="displayDiv('bigcontact')">
-					<div class="title">BLOG</div>
-					<div class="content" id="contp4">
+						</div>
+						<div class="content"></div>
 					</div>
 				</div>
-			</div>
-			<div id="bigabout" class="small">
-				<div class="close" onClick="closeDiv('bigabout')"><img src="./img/close.png"></div>
+				<div class="main" >
+					<div class="mainbody" id="p2" onclick="displayDiv('bigabout')">
+						<div class="title" >ABOUT</div>
 
-				<div class="slidetext">
-					<div class="slidetitle" >ABOUT</div>
-					<br />
-					I'm a full stack senior software engineer at <a href="www.moo.com" target="_blank">MOO</a> in London. Currently I'm working in a team where we are building a new checkout and all the services associated with that. I'm helping out across the full stack whether that's java on the backend, react and redux on the front end and various technologies as part of our CI/CD deployment process (gitlab ci, docker, debian packaging and a load of bash scripts masquerading as ansible yaml). 
-
-					<br /><br />
-
-					On this, my personal website, I tend to build small, visual, fun type projects.  Most of them work in the browser so are JS heavy with a bunch of funky CSS stuff and a smattering of SVG. For my side projects I enjoy working on entertaining and self contained projects - I get enough big problems to solve at work. This allows me to be fast and loose and a bit hacky. It's done in my free time so is meant to be fun for me.  If you enjoy it too so much the better. 
-
-					<br />
-					You can learn more about what interests me and what I am currently working with by reading <a href="http://blog.mikemjharris.com" target="_blank">my blog</a>.<br /><br />
-
-					Please feel free to contact me - particularly if you are interested in learning to code - I continue to work with organisations that help bring new developers into the industry (such as General Assembly and Mum's in Tech) and am happy to help anyone who thinks they might be interested.  You can't lose anything by at least reaching out and asking questions :).
-					<br><br>
-
-					E-Mail: <a href="mailto:hello@mikemjharris.com" target="_blank">hello@mikemjharris.com</a><br><br>
-					Twitter: <a href="https://twitter.com/Mikemjharris" target="_blank">@mikemjharris</a><br><br>
-					Blog: <a href="http://blog.mikemjharris.com" target="_blank">blog.mikemjharris.com</a><br><br>
-					Github: <a href="https://github.com/mikemjharris" target="_blank">mikemjharris</a><br><br>
-					Linkedin: <a href="https://www.linkedin.com/in/mikemjharris" target="_blank">Mike MJ Harris</a><br><br>
-
+					</div>
 				</div>
-			</div>
-
-			<div id="bigmain" class="small">
-				<div class="close" onClick="closeDiv('bigmain')"><img src="./img/close.png"></div>
-
-				<div class="slidetext">
-					<div class="slidetitle" >Mike Harris</div>
-					<br />
-					I'm a web-developer. See the other boxes for more about me, how to contact me and to see some of my projects. <br /><br />
-
-					Originally I built this site and you couldn't click on the box you just did.  Well you could but it didn't do anything. I even hinted at this as its border didn't change when you hovered over it. <br /><br />
-
-					It made sense.  At least to me. But not to the world. Everyone wanted to click on this box. And complained when they couldn't. <br /><br />
-
-					So I made it so you could. And here you are. Not sure what I should write as everything useful is in the other boxes.  But hopefully just the fact of clicking and something appearing made you warm and fuzzy.  <br /><br />
-
-					I will probably change this page/website one day. Until I change it this will be here.  Obviously.  <br /><br />
-
-					Enjoy the rest of my site.
-
+				<div class="main">
+					<div class="mainbody" id="p3" onclick="displayDiv('bigproject')">
+						<div class="title">PROJECTS</div>
+						<div class="content"> a load of stuff about me</div>
+					</div>
 				</div>
-			</div>
+				<div class="main">
+					<!-- this was the contact section.  Then it changed to the blog.  I haven't changed the ids yet... -->
+					<div class="mainbody" id="p4" onclick="displayDiv('bigcontact')">
+						<div class="title">BLOG</div>
+						<div class="content" id="contp4">
+						</div>
+					</div>
+				</div>
+				<div id="bigabout" class="small">
+					<div class="close" onClick="closeDiv('bigabout')"><img src="./img/close.png"></div>
 
-			<div id="bigcontact" class="small">
-				<div class="close" onClick="closeDiv('bigcontact')"><img src="./img/close.png"></div>
+					<div class="slidetext">
+						<div class="slidetitle" >ABOUT</div>
+						<br />
+						I'm a full stack senior software engineer at <a href="www.moo.com" target="_blank">MOO</a> in London. Currently I'm working in a team where we are building a new checkout and all the services associated with that. I'm helping out across the full stack whether that's java on the backend, react and redux on the front end and various technologies as part of our CI/CD deployment process (gitlab ci, docker, debian packaging and a load of bash scripts masquerading as ansible yaml). 
 
-				<div class="slidetext">
-					<div class="slidetitle" >BLOG</div>
-					<div class="contacts">
-						My Blog: <a href="http://blog.mikemjharris.com" target="_blank">blog.mikemjharris.com</a><br><br>
+						<br /><br />
 
-						A split between technical posts - such as the infrastructure behind the blog and CD/CI - and more thought posts.  Working out at about a post every other month. It's mostly interesting stuff for me but you may find the odd bit useful.
+						On this, my personal website, I tend to build small, visual, fun type projects.  Most of them work in the browser so are JS heavy with a bunch of funky CSS stuff and a smattering of SVG. For my side projects I enjoy working on entertaining and self contained projects - I get enough big problems to solve at work. This allows me to be fast and loose and a bit hacky. It's done in my free time so is meant to be fun for me.  If you enjoy it too so much the better. 
+
+						<br />
+						You can learn more about what interests me and what I am currently working with by reading <a href="http://blog.mikemjharris.com" target="_blank">my blog</a>.<br /><br />
+
+						Please feel free to contact me - particularly if you are interested in learning to code - I continue to work with organisations that help bring new developers into the industry (such as General Assembly and Mum's in Tech) and am happy to help anyone who thinks they might be interested.  You can't lose anything by at least reaching out and asking questions :).
+						<br><br>
+
+						E-Mail: <a href="mailto:hello@mikemjharris.com" target="_blank">hello@mikemjharris.com</a><br><br>
+						Twitter: <a href="https://twitter.com/Mikemjharris" target="_blank">@mikemjharris</a><br><br>
+						Blog: <a href="http://blog.mikemjharris.com" target="_blank">blog.mikemjharris.com</a><br><br>
+						Github: <a href="https://github.com/mikemjharris" target="_blank">mikemjharris</a><br><br>
+						Linkedin: <a href="https://www.linkedin.com/in/mikemjharris" target="_blank">Mike MJ Harris</a><br><br>
+
+					</div>
+				</div>
+
+				<div id="bigmain" class="small">
+					<div class="close" onClick="closeDiv('bigmain')"><img src="./img/close.png"></div>
+
+					<div class="slidetext">
+						<div class="slidetitle" >Mike Harris</div>
+						<br />
+						I'm a web-developer. See the other boxes for more about me, how to contact me and to see some of my projects. <br /><br />
+
+						Originally I built this site and you couldn't click on the box you just did.  Well you could but it didn't do anything. I even hinted at this as its border didn't change when you hovered over it. <br /><br />
+
+						It made sense.  At least to me. But not to the world. Everyone wanted to click on this box. And complained when they couldn't. <br /><br />
+
+						So I made it so you could. And here you are. Not sure what I should write as everything useful is in the other boxes.  But hopefully just the fact of clicking and something appearing made you warm and fuzzy.  <br /><br />
+
+						I will probably change this page/website one day. Until I change it this will be here.  Obviously.  <br /><br />
+
+						Enjoy the rest of my site.
+
+					</div>
+				</div>
+
+				<div id="bigcontact" class="small">
+					<div class="close" onClick="closeDiv('bigcontact')"><img src="./img/close.png"></div>
+
+					<div class="slidetext">
+						<div class="slidetitle" >BLOG</div>
+						<div class="contacts">
+							My Blog: <a href="http://blog.mikemjharris.com" target="_blank">blog.mikemjharris.com</a><br><br>
+
+							A split between technical posts - such as the infrastructure behind the blog and CD/CI - and more thought posts.  Working out at about a post every other month. It's mostly interesting stuff for me but you may find the odd bit useful.
+						</div>
+					</div>
+				</div>
+				<div id="bigproject" class="small">
+					<div class="close" onClick="closeDiv('bigproject')"><img src="./img/close.png"></div>
+
+					<div class="slidetext">
+						<div class="slidetitle" >PROJECTS</div>
+						Some of the projects I have built on the web. I also built this site. My expertise is Ruby and Ruby on Rails - with a smattering of Javascript and lots of CSS. Recently I have been playing around with MongoDB, Express, Angular and Node.<br><br>
+						<div class="projects">
+							<ul>
+								<li><a href="http://star-wars-timeline.mikemjharris.com">Star Wars Twitter Timeline</a><br></li>
+								<li><a href="svg.html">SVG Animations</a><br></li>
+								<li><a href="http://animated-message.mikemjharris.com/">Animated Messages</a><br></li>
+								<li><a href="http://snowman.mikemjharris.com/">3d Snowman Game</a><br></li>
+								<li><a href="./experiments/box.html">Box Drop Down</a><br></li>
+								<li><a href="./experiments/geometric-generator.html">Geometric Generator</a><br></li>
+								<li><a href="./experiments/square.html">Square Animation</a><br></li>
+								<li><a href="advanced_ttt/index.html">Advanced TicTacToe</a><br></li>
+								<li><a href="./experiments/boxspin.html">Spinning Box</a><br></li>
+								<li><a href="./experiments/ga_projects.html">Projects While at General Assembly</a><br></li>
+								<li><a href="./experiments/map.html">Maps</a><br></li>
+								<li><a href="./experiments/canvasClock.html">Clock</a><br></li>
+								<li><a href="./experiments/Real-O-Meter2.html">Real-o-meter</a><br></li>
+							</ul>
+						</div>
+
 					</div>
 				</div>
 			</div>
-			<div id="bigproject" class="small">
-				<div class="close" onClick="closeDiv('bigproject')"><img src="./img/close.png"></div>
-
-				<div class="slidetext">
-					<div class="slidetitle" >PROJECTS</div>
-					Some of the projects I have built on the web. I also built this site. My expertise is Ruby and Ruby on Rails - with a smattering of Javascript and lots of CSS. Recently I have been playing around with MongoDB, Express, Angular and Node.<br><br>
-					<div class="projects">
-						<ul>
-							<li><a href="http://star-wars-timeline.mikemjharris.com">Star Wars Twitter Timeline</a><br></li>
-							<li><a href="svg.html">SVG Animations</a><br></li>
-							<li><a href="http://animated-message.mikemjharris.com/">Animated Messages</a><br></li>
-							<li><a href="http://snowman.mikemjharris.com/">3d Snowman Game</a><br></li>
-							<li><a href="./experiments/box.html">Box Drop Down</a><br></li>
-							<li><a href="./experiments/geometric-generator.html">Geometric Generator</a><br></li>
-							<li><a href="./experiments/square.html">Square Animation</a><br></li>
-							<li><a href="advanced_ttt/index.html">Advanced TicTacToe</a><br></li>
-							<li><a href="./experiments/boxspin.html">Spinning Box</a><br></li>
-							<li><a href="./experiments/ga_projects.html">Projects While at General Assembly</a><br></li>
-							<li><a href="./experiments/map.html">Maps</a><br></li>
-							<li><a href="./experiments/canvasClock.html">Clock</a><br></li>
-							<li><a href="./experiments/Real-O-Meter2.html">Real-o-meter</a><br></li>
-						</ul>
-					</div>
-
-				</div>
-			</div>
-		</div>
+		</section>
 	</body>
 </html>
