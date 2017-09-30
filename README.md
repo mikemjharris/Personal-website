@@ -4,7 +4,7 @@ This is my static website. It started life back in 2011 and has evolved and grow
 
 #### Running the project
 
-This site is up and running at [mikemjharris.com](http://mikemjharris.com). If for some reason you want to host my website it is just a static website.  Pull everything down and just use your favorite piece of kit to server the files. 
+This site is up and running at [mikemjharris.com](https://www.mikemjharris.com). If for some reason you want to host my website it is just a static website.  Pull everything down and just use your favorite piece of kit to server the files. 
 
 #### Playing around
 
