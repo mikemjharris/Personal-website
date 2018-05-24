@@ -13,3 +13,5 @@ Feel free to look/borrow/reuse any of the code.  Be aware that it is a diary of 
 If you need to contact me you can do via [twitter](http://twitter.com/mikemjharris) or via email to hello@mikemjharris.com
 
 More details about everything on my website.
+
+you can read about more of my travels through tech on my [blog](blog.mikemjharris.com)
